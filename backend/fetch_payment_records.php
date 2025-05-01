@@ -4,9 +4,9 @@ header("Access-Control-Allow-Methods: GET, POST, PUT, DELETE, OPTIONS");
 header("Access-Control-Allow-Headers: Content-Type, Access-Control-Allow-Headers, Authorization, X-Requested-With");
 
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "northills";
+$username = "u572625467_groupV";
+$password = "Northills_12345";
+$dbname = "u572625467_northills";
 
 $conn = new mysqli($servername, $username, $password, $dbname);
 

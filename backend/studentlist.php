@@ -4,9 +4,9 @@ header("Content-Type: application/json; charset=UTF-8");
 
 // Database credentials
 $servername = "localhost";
-$username = "root";
-$password = "";
-$dbname = "northills";
+$username = "u572625467_groupV";
+$password = "Northills_12345";
+$dbname = "u572625467_northills";
 
 // Create connection
 $conn = new mysqli($servername, $username, $password, $dbname);
