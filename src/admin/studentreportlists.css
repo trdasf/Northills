@@ -1,0 +1,403 @@
+/* Application Container */
+.report-list-container-rl {
+  width: 100%;
+  height: 100vh;
+  padding-left: 4rem;
+  padding-right: 4rem;
+  padding-top: 3rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+  }
+  
+  .report-list-container-rl::-webkit-scrollbar {
+    width: 10px;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .report-list-container-rl::-webkit-scrollbar-thumb {
+    background-color: #b0b0b0; /* Light grey color for the thumb */
+    border-radius: 5px;
+  }
+  
+  .report-list-container::-webkit-scrollbar-track {
+    background-color: #ffffff; /* White background for the track */
+  }
+  
+  .header-rl {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    color: #333333;
+  }
+  
+  .application-title-rl {
+    font-size: 35px;
+    font-weight: bold;
+    color: #006400;
+  }
+  
+  .top-controls-reportlist {
+    display: flex;
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+    gap: 1rem;
+  }
+  
+  .reportlist-searchbar {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+  }
+  
+  .reportlist-searchbar input {
+    width: 490px; /* Adjusted for better alignment */
+    padding: 10px;
+    border: 1px solid #ddd;
+    background-color: #fff;
+    border-radius: 4px;
+    margin-right: 16rem;
+  }
+    
+  .total-label-rl {
+    font-size: 40px;
+    color: #333333;
+    margin-left: 580px;
+  }
+  
+  .total-count-rl {
+    font-size: 40px;
+    font-weight: bold;
+    color: #006400;
+  }
+  .grade-dropdown-rl {
+    background-color: #ffffff;
+    color: #006400;
+    border: 1px solid #006400;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    width: 150px;
+  }
+  
+  .grade-dropdown-rl:hover {
+    background-color: #f8f8f8;
+  }
+  
+  .pdf-button-reportlist {
+    background-color: #006400;
+    color: #ffff;
+    border: 1px solid #006400;
+    padding: 0.5rem 1rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    height: 4.8vh;
+    width: 80px;
+  }
+  
+  .pdf-button-reportlist:hover {
+    background-color: #139e13;
+    color: #f8f8f8;
+    border: 1px solid #55f455;
+  }
+  
+  .application-table-rl {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .application-table-rl th,
+  .application-table-rl td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+  }
+  
+  .application-table-rl th {
+    color: #333333;
+    font-weight: bold;
+    font-size: 11px;
+  }
+  
+  .application-table-rl td {
+    color: #555555;
+    font-size: 11px;
+  }
+  
+  .application-table-rl td:last-child,
+  .application-table-rl td:nth-last-child(2) {
+    text-align: center;
+  }
+  
+  .application-table-rl tr:hover {
+    background-color: #f9f9f9;
+  }
+  
+
+.reportview-icon {
+  font-size: 18px;
+  text-align: left;
+}
+@media (max-width: 480px) {
+  .report-list-container-rl {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    margin-top: 1rem;
+  }
+  .header-rl {
+    margin-top: 50px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    width: 100%;
+    position: fixed;
+  }
+  .header-rl h2, 
+  .header-rl p {
+      margin-bottom: 15px;
+      padding: 0;
+  }
+  .application-title-rl {
+    font-size: 20px;
+  }
+  .top-controls-reportlist {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    gap: 5px;
+    padding: 0;
+    position: fixed;
+  }
+  .reportlist-searchbar {
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+  }
+  .reportlist-searchbar input {
+    width: 186px;
+    margin-right: 1px;
+    padding: 0.55rem 0.4rem;
+    font-size: 8px;
+    margin-right: 10px;
+  }
+  .reportlist-searchbar input::placeholder{
+    font-size: 8px;
+  }
+
+  
+  .total-label-rl {
+    font-size: 20px;
+    margin-left: 110px;
+  }
+  .total-count-rl {
+    font-size: 20px;
+  }
+  .grade-dropdown-rl {
+    font-size: 10px;
+    text-align: left;
+    width: 90px;
+    padding: 0.5rem 0.9rem;
+  }
+  .pdf-button-reportlist{
+    font-size: 10px;
+    height: 3.5vh;
+    width: 50px;
+  }
+  
+  .application-table-rl {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 9rem;
+  }
+  .application-table-rl th {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .application-table-rl td {
+    font-size: 10px;
+    padding: 15px;
+        white-space: nowrap;
+  }
+  
+    
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .report-list-container-rl {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    margin-top: 1rem;
+    width: 100vw;
+  }
+  .header-rl {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    width: 100%;
+    position: fixed;
+  }
+  .header-rl h2, 
+  .header-rl p {
+      margin-bottom: 15px;
+      padding: 0;
+  }
+  .application-title-rl {
+    font-size: 25px;
+  }
+  .top-controls-reportlist {
+    margin-top: 100px;
+    margin-bottom: 10px;
+    gap: 5px;
+    padding: 0;
+    position: fixed;
+  }
+  .reportlist-searchbar {
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+  }
+  .reportlist-searchbar input {
+    width: 400px;
+    padding: 0.55rem 0.4rem;
+    font-size: 15px;
+    margin-right: 10px;
+  }
+  .reportlist-searchbar input::placeholder{
+    font-size: 12px;
+  }
+
+  
+  .total-label-rl {
+    font-size: 25px;
+    margin-left: 400px;
+  }
+  .total-count-rl {
+    font-size: 25px;
+  }
+  .grade-dropdown-rl {
+    font-size: 15px;
+    text-align: left;
+    width: 110px;
+    padding: 0.5rem 0.9rem;
+    margin-left: 80px;
+  }
+  .pdf-button-reportlist {
+    font-size: 14px;
+    text-align: center;
+    height: 3.6vh;
+    width: 80px;
+
+  }
+  
+  .application-table-rl {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10rem;
+  }
+  .application-table-rl th {
+    font-size: 12px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .application-table-rl td {
+    font-size: 12px;
+    padding: 15px;
+        white-space: nowrap;
+  }
+  
+    
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .report-list-container-rl {
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 2rem;
+    margin-top: 1rem;
+    width: 100vw;
+  }
+  .header-rl {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    width: 100%;
+    position: fixed;
+  }
+  .header-rl h2, 
+  .header-rl p {
+      margin-bottom: 15px;
+      padding: 0;
+  }
+  .application-title-rl {
+    font-size: 35px;
+  }
+  .top-controls-reportlist {
+    margin-top: 120px;
+    margin-bottom: 10px;
+    gap: 5px;
+    padding: 0;
+    position: fixed;
+  }
+  .reportlist-searchbar {
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+  }
+  .reportlist-searchbar input {
+    width: 520px;
+    padding: 0.55rem 0.4rem;
+    font-size: 20px;
+    margin-right: 10px;
+  }
+  .reportlist-searchbar input::placeholder{
+    font-size: 15px;
+  }
+
+  
+  .total-label-rl {
+    font-size: 35px;
+    margin-left: 540px;
+  }
+  .total-count-rl {
+    font-size: 35px;
+  }
+  .grade-dropdown-rl {
+    font-size: 20px;
+    text-align: left;
+    width: 140px;
+    padding: 0.5rem 0.9rem;
+    margin-left: 150px;
+  }
+  .pdf-button-reportlist {
+    font-size: 20px;
+    text-align: center;
+    height: 5.6vh;
+    width: 100px;
+
+  }
+  
+  .application-table-rl {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 11rem;
+  }
+  .application-table-rl th {
+    font-size: 15px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .application-table-rl td {
+    font-size: 15px;
+    padding: 15px;
+        white-space: nowrap;
+  }
+  
+    
+}

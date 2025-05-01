@@ -1,0 +1,633 @@
+/* Container Styling */
+.strands-container-str {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.strands-container-str::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff;
+}
+
+.strands-container-str::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0;
+  border-radius: 5px;
+}
+
+.strands-container-str::-webkit-scrollbar-track {
+  background-color: #ffffff;
+}
+
+/* Header */
+.strands-header-str {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+}
+
+.strands-title-str {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+/* Top Controls with Inline Buttons */
+.top-controls-strands-str {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start */
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.search-and-add-strands-str {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between the search input and the add button */
+}
+
+.search-input-strands-str {
+  width: 550px; /* Adjusted width */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-right: 7rem;
+}
+
+.add-button-strands-str {
+  padding: 0.5rem 2rem;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-bottom: 10px;
+}
+
+.add-button-strands-str:hover {
+  background-color: #004d33;
+}
+
+.strands-filter-str {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 120px;
+  margin-bottom: 10px;
+}
+
+.strands-filter-str:hover {
+  background-color: #f8f8f8;
+}
+
+.strands-pdf-button-str {
+  background-color: #fff;
+  color: #004d33;
+  border: 1px solid #006400;
+  padding: 0.55rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+.strands-pdf-button-str:hover {
+  background-color: #cedfce;
+  color:#006400;
+  border: solid 1px #006400;
+}
+
+
+/* Table Styling */
+.strands-table-str {
+  width: 100%;
+  border-collapse: collapse;
+  margin-top: 1rem;
+}
+
+
+.strands-table-str th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.strands-table-str td {
+  color: #555555;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.strands-table-str td:last-child {
+  text-align: center;
+}
+
+.strands-table-str tr:hover {
+  background-color: #f9f9f9;
+}
+
+/* Modal Styling */
+.strands-modal-stra {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.strands-modal-content-stra {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 600px;
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+}
+
+.strands-modal-title-stra {
+  font-size: 24px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.strands-modal-form-stra {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 1rem;
+  padding-left: 25px;
+  padding-right: 25px;
+}
+
+.strands-form-group-stra {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+}
+
+.strands-form-group-stra.full-width {
+  flex-basis: 100%;
+}
+
+.strands-modal-form-stra label {
+  font-size: 14px;
+  color: #333333;
+  margin-bottom: 0.5rem;
+  font-weight: 500;
+}
+
+.strands-modal-form-stra input,
+.strands-modal-form-stra select {
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+  margin-bottom: 10px;
+}
+
+/* Error Highlighting */
+input[style*="border-color: red"], select[style*="border-color: red"] {
+  border-color: red;
+}
+
+span {
+  font-size: 12px;
+  color: red;
+}
+
+/* Modal Buttons */
+.strands-modal-buttons-stra {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 1rem;
+}
+
+.strands-save-button-stra {
+  background-color: #006400;
+  color: #ffffff;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 110px;
+}
+
+.strands-cancel-button-stra {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.strands-save-button-stra:hover {
+  background-color: #004d33;
+}
+.strands-cancel-button-stra:hover {
+  background-color: #cedfce;
+  color:#006400;
+  border: solid 1px #006400;
+  }
+/* Delete icon styling */
+.strands-delete-icon-strands {
+  font-size: 16px;
+  cursor: pointer;
+  color: #B22222;
+}
+.strands-table-container-str{
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.strands-table-container-str::-webkit-scrollbar {
+  height: 3px; /* height for horizontal scrollbar */
+}
+
+.strands-table-container-str::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+  border-radius: 10px;
+}
+
+.strands-table-container-str::-webkit-scrollbar-thumb {
+  background: #f1f1f1; /* thumb color */
+  border-radius: 3px;
+}
+
+.strands-table-container-str::-webkit-scrollbar-thumb:hover {
+  background: #555; /* thumb color on hover */
+}
+@media (max-width: 480px) {
+  .strands-container-str {
+    padding: 0;
+    margin-top: 1rem;
+    width: 100%; /* White background */
+    overflow-x: hidden;
+  }
+  .strands-header-str {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+  }
+  .strands-title-str {
+    font-size: 25px;
+    z-index: 1000;
+  }
+  .top-controls-strands-str {
+    padding: 0%;
+    margin-top: 10px;
+    margin-bottom: 10px;
+  }
+  
+.search-and-add-strands-str {
+  margin-top: 1px;
+  margin-bottom: 10px;
+  gap: 1px;
+  padding: 0;
+  width: 100%;
+  display: flex; /* Corrected */
+  justify-content: space-between;
+  align-items: center;
+}
+.search-input-strands-str {
+  width: 155px;
+  margin-right: 1px;
+  padding: 0.55rem 0.4rem;
+  font-size: 10px;
+  margin-right: 10px;
+}
+.search-input-strands-str::placeholder {
+  font-size: 10px;
+}
+.add-button-strands-str {
+  font-size: 12px;
+  padding: 0.5rem 1rem;
+}
+.strands-filter-str {
+  font-size: 10px;
+  text-align: left;
+  width: 65px;
+  padding: 0.6rem 0.1rem;
+  margin-bottom: 10px;
+}
+.strands-pdf-button-str {
+  font-size: 12px;
+  padding: 0.5rem 1rem;
+}
+.strands-table-str {
+  margin-top: 1px;
+}
+
+.strands-table-str th {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.strands-table-str td {
+  font-size: 10px;
+  padding: 15px;
+  white-space: nowrap;
+}
+.strands-modal-content-stra {
+  width: 600px;
+  max-width: 90%;
+  height: 61vh;
+  padding: 30px 15px;
+}
+
+.strands-modal-title-stra {
+  font-size: 16px;
+}
+
+.strands-form-group-stra {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+}
+.strands-modal-form-stra label {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.strands-modal-form-stra input,
+.strands-modal-form-stra select {
+  padding: 0.4rem;
+  font-size: 10px;
+}
+.strands-modal-buttons-stra {
+  margin-top: 0.4rem;
+  margin-bottom: 0.5rem;
+}
+.strands-cancel-button-stra {
+  width: 85px;
+  font-size: 10px;
+  }
+.strands-save-button-stra {
+    font-size: 10px;
+    width: 85px;
+}
+
+}
+@media (min-width:481px) and (max-width: 768px) {
+  .strands-container-str {
+    padding: 0;
+    margin-top: 2rem;
+    width: 100%; /* White background */
+    overflow-x: hidden;
+  }
+  .strands-header-str {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+  }
+  .strands-title-str {
+    font-size: 30px;
+    z-index: 1000;
+  }
+  .top-controls-strands-str {
+    padding: 0%;
+    margin-top: 1px;
+    margin-bottom: 10px;
+  }
+  
+.search-and-add-strands-str {
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 10px; /* Space between the search input and the add button */
+}
+.search-input-strands-str {
+  width: 350px;
+  padding: 0.55rem 0.4rem;
+  font-size: 15px;
+  margin-right: 100px;
+}
+.search-input-strands-str::placeholder {
+  font-size: 10px;
+}
+.add-button-strands-str {
+  font-size: 15px;
+  padding: 0.5rem 1rem;
+}
+.strands-filter-str {
+  font-size: 15px;
+  text-align: left;
+  width: 100px;
+  padding: 0.6rem 0.1rem;
+  margin-bottom: 10px;
+}
+.strands-pdf-button-str {
+  font-size: 15px;
+  padding: 0.5rem 1rem;
+}
+.strands-table-str {
+  margin-top: 10px;
+}
+
+.strands-table-str th {
+    font-size: 12px;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.strands-table-str td {
+  font-size: 12px;
+  padding: 15px;
+  white-space: nowrap;
+}
+.strands-modal-content-stra {
+  width: 600px;
+  max-width: 90%;
+  height: 73vh;
+  padding: 30px 15px;
+}
+
+.strands-modal-title-stra {
+  font-size: 25px;
+}
+
+.strands-form-group-stra {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+}
+.strands-modal-form-stra label {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.strands-modal-form-stra input,
+.strands-modal-form-stra select {
+  padding: 10px;
+  font-size: 15px;
+}
+.strands-modal-buttons-stra {
+  margin-top: 2rem;
+  margin-bottom: 0.5rem;
+}
+.strands-cancel-button-stra {
+  width: 110px;
+  font-size: 15px;
+  }
+.strands-save-button-stra {
+    font-size: 15px;
+    width: 110px;
+}
+
+}
+
+@media (min-width:769px) and (max-width: 1024px) {
+  .strands-container-str {
+    padding: 0;
+    margin-top: 1rem;
+    width: 100%; /* White background */
+    overflow-x: hidden;
+  }
+  .strands-header-str {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+  }
+  .strands-title-str {
+    font-size: 35px;
+    z-index: 1000;
+  }
+  .top-controls-strands-str {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+.search-and-add-strands-str {
+  display: flex;
+  align-items: center;
+  margin-top: 10px;
+  gap: 10px; /* Space between the search input and the add button */
+}
+.search-input-strands-str {
+  width: 450px;
+  margin-right: 1px;
+  padding: 0.55rem 0.4rem;
+  font-size: 20px;
+  margin-right: 150px;
+}
+.search-input-strands-str::placeholder {
+  font-size: 15px;
+}
+.add-button-strands-str {
+  font-size: 20px;
+  padding: 0.5rem 1.5rem;
+}
+.strands-filter-str {
+  font-size: 18px;
+  text-align: left;
+  width: 145px;
+  padding: 0.7rem 1.5rem;
+  margin-bottom: 10px;
+}
+.strands-pdf-button-str {
+  font-size: 20px;
+  padding: 0.5rem 1.5rem;
+}
+.strands-table-str {
+  margin-top: 10px;
+}
+
+.strands-table-str th {
+    font-size: 15px;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.strands-table-str td {
+  font-size: 15px;
+  padding: 15px;
+  white-space: nowrap;
+}
+.strands-modal-content-stra {
+  width: 600px;
+  max-width: 90%;
+  margin-top: 3rem;
+  height: 87vh;
+  padding: 30px 15px;
+}
+
+.strands-modal-title-stra {
+  font-size: 25px;
+}
+
+.strands-form-group-stra {
+  display: flex;
+  flex-direction: column;
+  flex: 1;
+
+}
+.strands-modal-form-stra label {
+  font-size: 14px;
+  margin-bottom: 5px;
+}
+
+.strands-modal-form-stra input,
+.strands-modal-form-stra select {
+  padding: 8px;
+  font-size: 14px;
+}
+.strands-modal-buttons-stra {
+  margin-top: 1rem;
+  margin-bottom: 0.5rem;
+}
+.strands-cancel-button-stra {
+  width: 110px;
+  font-size: 15px;
+  }
+.strands-save-button-stra {
+    font-size: 15px;
+    width: 110px;
+}
+
+}

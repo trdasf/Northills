@@ -1,0 +1,388 @@
+/* Container for the review form */
+.reports-container {
+  width: 100%;
+  height: 100vh;
+  padding: 3rem;
+    font-family: 'Poppins', sans-serif;
+    overflow-x: auto; /* Enables vertical scrolling */
+  }
+  /* Custom Scrollbar for Webkit Browsers (Chrome, Safari) */
+  .reports-container::-webkit-scrollbar {
+    width: 10px;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .reports-container::-webkit-scrollbar-thumb {
+    background-color: #b0b0b0; /* Light grey color for the thumb */
+    border-radius: 5px;
+  }
+  
+  .reports-container::-webkit-scrollbar-track {
+    background-color: #ffffff; /* White background for the track */
+  }
+
+  .report-title-rt {
+    color: #006400;
+    font-size: 35px;
+    text-transform: uppercase;
+    margin-left: 1rem;
+    }
+  h2 {
+  color: #006400;
+  font-size: 24px;
+  margin-bottom: 5px;
+  text-transform: uppercase;
+  }
+
+.header-r {
+  display: flex;
+  align-items: center; /* Vertically aligns items in the center */
+  gap: 0.3rem; /* Adds minimal spacing between items */
+  color: #333333;
+  font-size: 23px;
+  font-family: 'Poppins', sans-serif;
+  margin-bottom: 1rem;
+}
+
+.breadcrumb-r-button {
+  background: none;
+  border: none;
+  color: #555; /* Initial color */
+  cursor: pointer;
+  font-size: inherit; /* Matches parent font size */
+  text-decoration: none; /* Removes underline */
+  padding: 0; /* Removes extra space */
+}
+
+.breadcrumb-r-button:hover {
+  color: #3333;
+}
+
+.breadcrumb-separator {
+  margin: 0 5px;
+  color: #555;
+}
+.r-table {
+width: 100%;
+border-collapse: collapse;
+margin-bottom: 1rem;
+}
+
+.table-r th,
+.table-r td {
+text-align: left;
+padding: 8px 15px;
+border: 1px solid #ddd;
+}
+
+.table-r th {
+background-color: #f4f4f4;
+font-weight: bold;
+color: #333;
+text-transform: uppercase;
+font-size: 10px;
+}
+
+.table-r td {
+color: #555;
+font-size: 12px;
+}
+
+.table-r tbody tr:nth-child(even) {
+background-color: #f9f9f9;
+}
+
+.table-r tbody tr:hover {
+background-color: #f1f1f1;
+}
+
+.button-section,
+.grade-section,
+.payment-section {
+display: flex;
+justify-content: space-between;
+align-items: center;
+margin-bottom: 1rem;
+
+}
+
+.button-section {
+display: flex;
+align-items: center;
+margin-bottom: 1rem;
+}
+.button-section span {
+font-size: 12px;
+font-weight: bold;
+color: #333;
+}
+
+.button-section span,
+.grade-section span,
+.payment-section span {
+font-size: 15px;
+font-weight: bold;
+color: #333333;
+}
+
+.btn {
+padding: 6px 18px;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 12px;
+font-weight: 500;
+}
+
+.refresh-btn1 {
+color: #006400;
+background-color: #ffff;
+margin-left: 35rem;
+border: 1px solid #006400;
+}
+.refresh-btn2 {
+  color: #006400;
+  background-color: #ffff;
+  margin-left: 43rem;
+  border: 1px solid #006400;
+}
+.refresh-btn3 {
+  color: #006400;
+  background-color: #ffff;
+  margin-left: 31rem;
+  border: 1px solid #006400;
+}
+
+.refresh-btn1:hover, .refresh-btn2:hover, .refresh-btn3:hover{
+  background-color: #cedfce;
+color:#006400;
+border: solid 1px #006400;
+}
+
+.pdf-btn {
+  color: #ffff;
+  background-color: #006400;
+  border: 1px solid #006400;
+}
+.excel-btn {
+  color: #ffff;
+  background-color: #006400;
+  border: 1px solid #006400;
+}
+
+
+
+
+.pdf-btn:hover,
+.excel-btn:hover {
+opacity: 0.9;
+background-color: #cedfce;
+color:#006400;
+border: solid 1px #006400;
+}
+
+.grade-section span {
+color: #d9534f; /* Red for General Wavg */
+}
+
+.payment-section span {
+color: #d9534f; /* Red for balance */
+}
+
+.payment-section span:last-child {
+font-size: 14px;
+font-weight: bold;
+color: #333;
+}
+/* Modal Styles */
+.report-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.report-modal-content {
+  background-color: white;
+  padding: 20px;
+  border-radius: 8px;
+  text-align: center;
+  width: 450px;
+}
+.report-modal-content h3 {
+  text-align: center;
+  color: #006400;
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.report-modal-content p {
+  text-align: center;
+  color: #333;
+}
+
+.report-modal-buttons {
+  display: flex;
+  justify-content: center; 
+  align-items: center;    
+  gap: 5rem;               
+  margin-top: 2rem;  
+  margin-top: 10px;
+}
+
+.report-confirm-btn{
+  background-color: #006400;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.report-cancel-btn {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.report-confirm-btn:hover {
+  background-color: #048b04;
+}
+
+.report-cancel-btn:hover {
+  background-color: #cedfce;
+  color:#006400;
+  border: solid 1px #006400;
+}
+@media screen and (max-width: 768px) {
+  .reports-container {
+    padding-left: 30px;
+    padding-right: 30px;
+    margin-top: 3rem;
+}
+
+.header-r {
+    margin-bottom: 10px;
+    position: fixed;
+}
+
+.report-title-rt {
+    color: #006400;
+    font-size: 25px;
+}
+
+h2 {
+    font-size: 20px;
+}
+
+.breadcrumb-r-button {
+    background: none;
+    border: none;
+    color: #555;
+    cursor: pointer;
+    font-size: 18px;
+}
+
+/* Wrap the table to enable horizontal scrolling */
+.table-wrapper {
+    width: 100%;
+    overflow-x: auto;
+}
+
+.table-r {
+    margin-top: 10px;
+    margin-bottom: 20px;
+    width: 100%;
+    border-collapse: collapse;
+    white-space: nowrap; /* Prevents table cells from wrapping */
+}
+
+.table-r th {
+    font-size: 7px;
+    padding: 15px;
+    white-space: nowrap;
+}
+
+.table-r td {
+    font-size: 5px;
+    padding: 15px;
+}
+
+.button-section,
+.grade-section,
+.payment-section {
+    flex-direction: row;
+    align-items: flex-start;
+    gap: 2px;
+}
+
+.enrolled-subjects-section h2,
+.grade-section h2,
+.payment-section h2{
+    margin-top: 50px;
+}
+.enrolled-subjects-section h2,
+.grade-section h2,
+.payment-section h2{
+    margin-top: 50px;
+}
+
+.btn {
+    padding: 5px 10px;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 10px;
+    font-weight: 500;
+}
+
+.button-section {
+    display: flex;
+    align-items: center;
+    margin-bottom: 0px;
+}
+
+.button-section span {
+    font-size: 10px;
+}
+
+.button-section span,
+.grade-section span,
+.payment-section span {
+    font-size: 10px;
+}
+
+.refresh-btn1 {
+    margin-left: 30px;
+    border: 1px solid #006400;
+}
+
+.refresh-btn2 {
+    color: #006400;
+    background-color: #fff;
+    margin-left: 115px;
+    border: 1px solid #006400;
+}
+
+.refresh-btn3 {
+    color: #006400;
+    background-color: #fff;
+    margin-left: 10px;
+    border: 1px solid #006400;
+}
+.report-modal-content{
+  width: 300px;
+}
+     
+  }

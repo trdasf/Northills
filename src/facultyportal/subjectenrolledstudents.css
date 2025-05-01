@@ -1,0 +1,240 @@
+/* Application Container */
+.ss-enrolled-students-container {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.ss-enrolled-students-container::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff; /* White background */
+}
+
+.ss-enrolled-students-container::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* Light grey color for the thumb */
+  border-radius: 5px;
+}
+
+.ss-enrolled-students-container::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+.back-subject-schedule {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+}
+
+.subject-schedule-breadcrumb-button {
+  background: none;
+  border: none;
+  color:  #555;
+  cursor: pointer;
+  font-size: 18px;
+}
+
+.subject-schedule-breadcrumb-button:hover {
+  color: #3333;
+}
+.header-sses {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+}
+
+.application-title-sses {
+  font-size: 30px;
+  font-weight: bold;
+  color: #006400;
+  margin-left: 1rem;
+  margin-right: 6.2rem;
+}
+
+.top-controls-enrolledstudents-ss {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.search-bar-sses input {
+  width: 700px;
+  padding: 10px; /* Removed space between 10 and px */
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.total-label-sses {
+  font-size: 30px;
+  color: #333333;
+  margin-left: 100px;
+}
+
+.total-count-sses {
+  font-size: 30px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.pdf-button-sses {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.pdf-button-sses:hover {
+  background-color: #f8f8f8;
+}
+
+.application-table-sses {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.application-table-sses th,
+.application-table-sses td {
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.application-table-sses th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+}
+
+.application-table-sses td {
+  color: #555555;
+  font-size: 11px;
+}
+
+.application-table-sses td:last-child,
+.application-table-sses td:nth-last-child(2) {
+  text-align: center;
+}
+
+.application-table-sses tr:hover {
+  background-color: #f9f9f9;
+}
+.add-button-sses {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 1rem;
+}
+
+.add-button-sses:hover {
+  background-color: #f8f8f8;
+}
+
+.edit-icon-ses {
+  font-size: 16px;
+}
+
+/* Updated Modal Styling */
+.modal-schedule-ses {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.modal-content-ses {
+background-color: #ffffff;
+border-radius: 8px;
+padding: 1rem;
+width: 450px;
+box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2);
+display: flex;
+flex-direction: column;
+gap: 1.5rem;
+}
+
+.modal-content-ses h3 {
+font-size: 24px;
+font-weight: bold;
+color: #006400;
+text-align: center;
+margin-bottom: 1.5rem;
+}
+
+.modal-content-ses label {
+display: flex;
+flex-direction: column;
+font-size: 14px;
+color: #333333;
+margin-bottom: 1rem;
+font-weight: 500;
+}
+
+.modal-content-ses input {
+padding: 0.5rem;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 14px;
+}
+
+.button-group-ses {
+display: flex;
+justify-content: space-between;
+margin-top: 1rem;
+}
+
+.save-button-ses,
+.cancel-button-ses {
+padding: 0.5rem 1rem;
+font-size: 14px;
+border-radius: 4px;
+border: none;
+cursor: pointer;
+}
+
+.save-button-ses {
+background-color: #1d563f;
+color: white;
+border: none;
+border-radius: 4px;
+cursor: pointer;
+font-size: 14px;
+width: 110px;
+}
+
+.cancel-button-ses {
+background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.save-button-ses:hover{
+background-color: #004d33;
+}
+.cancel-button-ses:hover {
+background-color: #e6f5e9;
+}

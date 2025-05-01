@@ -1,0 +1,551 @@
+/* Application Container */
+.enrolled-students-container-es {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+  position: relative; /* For modal positioning */
+}
+
+.enrolled-students-container-es::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff; /* White background */
+}
+
+.enrolled-students-container-es::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* Light grey color for the thumb */
+  border-radius: 5px;
+}
+
+.enrolled-students-container-es::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+.enrolled-students-header-es {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+}
+
+.enrolled-students-title-es {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.top-controls-enrolledstudents {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar-enrolledstudents {
+  display: flex;
+  align-items: center;
+}
+
+.search-bar-enrolledstudents input {
+  width: 600px;
+  padding: 10px;
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-right: 1rem;
+}
+
+.enrolled-students-total-label-es {
+  font-size: 40px;
+  color: #333333;
+  margin-left: 390px;
+}
+
+.enrolled-students-total-count-es {
+  margin-left: 10px;
+  font-size: 40px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.enrolled-students-filter-es {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 120px;
+}
+
+.enrolled-students-filter-es:hover {
+  background-color: #f8f8f8;
+}
+
+.export-buttons {
+  display: flex;
+  gap: 10px;
+}
+
+.enrolled-students-pdf-button-es,
+.enrolled-students-excel-button-es {
+  background-color: #006400;
+  color: #ffff;
+  border: 1px solid #006400;
+  padding: 0.55rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.enrolled-students-excel-button-es {
+  background-color: #1E7E34;
+}
+
+.enrolled-students-pdf-button-es:hover,
+.enrolled-students-excel-button-es:hover {
+  background-color: #cedfce;
+  color: #006400;
+  border: solid 1px #006400;
+}
+
+.export-icon {
+  font-size: 14px;
+}
+
+.enrolled-students-table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.enrolled-students-table th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.enrolled-students-table td {
+  color: #555555;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.enrolled-students-table td:last-child,
+.enrolled-students-table td:nth-last-child(2) {
+  text-align: center;
+}
+
+.enrolled-students-table tr:hover {
+  background-color: #f9f9f9;
+}
+
+.enrolled-students-view-icon {
+  font-size: 18px;
+  text-align: left;
+}
+
+.enrolled-students-table-container {
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.enrolled-students-table-container::-webkit-scrollbar {
+  height: 3px; /* height for horizontal scrollbar */
+}
+
+.enrolled-students-table-container::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+  border-radius: 10px;
+}
+
+.enrolled-students-table-container::-webkit-scrollbar-thumb {
+  background: #f1f1f1; /* thumb color */
+  border-radius: 3px;
+}
+
+.enrolled-students-table-container::-webkit-scrollbar-thumb:hover {
+  background: #555; /* thumb color on hover */
+}
+
+/* Confirmation Modal */
+.confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 5px 15px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content h3 {
+  color: #006400;
+  margin-top: 0;
+  font-size: 1.5rem;
+}
+
+.modal-buttons {
+  display: flex;
+  justify-content: flex-end;
+  gap: 10px;
+  margin-top: 1.5rem;
+}
+
+.confirm-button {
+  background-color: #006400;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.cancel-button {
+  background-color: #f1f1f1;
+  color: #333;
+  border: 1px solid #ddd;
+  padding: 8px 16px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+.confirm-button:hover {
+  background-color: #004d00;
+}
+
+.cancel-button:hover {
+  background-color: #e1e1e1;
+}
+
+@media (max-width: 480px) {
+  .enrolled-students-container-es {
+    padding: 0;
+    margin-top: 1rem;
+    overflow-x: hidden;
+  }
+  
+  .enrolled-students-header-es {
+    margin-top: 55px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .enrolled-students-header-es h2, 
+  .enrolled-students-header-es p {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  
+  .enrolled-students-title-es {
+    font-size: 20px;
+  }
+  
+  .top-controls-enrolledstudents {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 5px;
+    padding: 0;
+    flex-direction: column;
+    align-items: flex-start;
+  }
+  
+  .search-bar-enrolledstudents {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .search-bar-enrolledstudents input {
+    width: 186px;
+    margin-right: 10px;
+    padding: 0.55rem 0.4rem;
+    font-size: 10px;
+  }
+  
+  .search-bar-enrolledstudents input::placeholder {
+    font-size: 8px;
+  }
+
+  .enrolled-students-total-label-es {
+    font-size: 20px;
+    margin-left: 25px;
+  }
+  
+  .enrolled-students-total-count-es {
+    font-size: 20px;
+  }
+
+  .enrolled-students-filter-es {
+    font-size: 10px;
+    text-align: left;
+    width: 90px;
+    padding: 0.5rem 0.9rem;
+  }
+  
+  .export-buttons {
+    width: 100%;
+    justify-content: space-between;
+    margin-top: 10px;
+  }
+  
+  .enrolled-students-pdf-button-es,
+  .enrolled-students-excel-button-es {
+    font-size: 10px;
+    padding: 0.5rem 1rem;
+  }
+  
+  .enrolled-students-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .enrolled-students-table th {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  
+  .enrolled-students-table td {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  
+  .modal-content {
+    padding: 1rem;
+    width: 300px;
+  }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+  .enrolled-students-container-es {
+    padding: 0;
+    margin-top: 2rem;
+  }
+  
+  .enrolled-students-header-es {
+    margin-top: 55px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .enrolled-students-header-es h2, 
+  .enrolled-students-header-es p {
+    margin-bottom: 15px;
+    padding: 0;
+  }
+  
+  .enrolled-students-title-es {
+    font-size: 25px;
+  }
+  
+  .top-controls-enrolledstudents {
+    margin-top: 10px;
+    margin-bottom: 10px;
+    gap: 5px;
+    padding: 0;
+    flex-wrap: wrap;
+  }
+  
+  .search-bar-enrolledstudents {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 10px;
+  }
+  
+  .search-bar-enrolledstudents input {
+    width: 300px;
+    margin-right: 10px;
+    padding: 0.55rem 0.4rem;
+    font-size: 15px;
+  }
+  
+  .search-bar-enrolledstudents input::placeholder {
+    font-size: 12px;
+  }
+
+  .enrolled-students-total-label-es {
+    font-size: 25px;
+    margin-left: 100px;
+    margin-right: 10px;
+  }
+  
+  .enrolled-students-total-count-es {
+    font-size: 25px;
+    margin-left: 5px;
+  }
+
+  .enrolled-students-filter-es {
+    font-size: 15px;
+    text-align: left;
+    width: 115px;
+    padding: 0.5rem 0.9rem;
+  }
+  
+  .export-buttons {
+    justify-content: flex-end;
+    width: 100%;
+    margin-top: 10px;
+  }
+  
+  .enrolled-students-pdf-button-es,
+  .enrolled-students-excel-button-es {
+    font-size: 15px;
+    padding: 6px 25px;
+  }
+  
+  .enrolled-students-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 1rem;
+  }
+  
+  .enrolled-students-table th {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  
+  .enrolled-students-table td {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .enrolled-students-container-es {
+    padding: 0;
+    margin-top: 1rem;
+  }
+  
+  .enrolled-students-header-es {
+    margin-top: 55px;
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+  }
+  
+  .enrolled-students-header-es h2, 
+  .enrolled-students-header-es p {
+    margin-bottom: 20px;
+    padding: 0;
+  }
+  
+  .enrolled-students-title-es {
+    font-size: 30px;
+  }
+  
+  .top-controls-enrolledstudents {
+    margin-top: 0px;
+    margin-bottom: 30px;
+    gap: 5px;
+    padding: 0;
+  }
+  
+  .search-bar-enrolledstudents {
+    padding: 0;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 1rem;
+  }
+  
+  .search-bar-enrolledstudents input {
+    width: 400px;
+    margin-right: 10px;
+    padding: 0.55rem 0.4rem;
+    font-size: 20px;
+  }
+  
+  .search-bar-enrolledstudents input::placeholder {
+    font-size: 15px;
+  }
+
+  .enrolled-students-total-label-es {
+    font-size: 30px;
+    margin-left: 300px;
+  }
+  
+  .enrolled-students-total-count-es {
+    font-size: 30px;
+    margin-left: 5px;
+  }
+
+  .enrolled-students-filter-es {
+    font-size: 20px;
+    text-align: left;
+    width: 155px;
+    padding: 0.5rem 0.9rem;
+  }
+  
+  .export-buttons {
+    display: flex;
+    gap: 15px;
+  }
+  
+  .enrolled-students-pdf-button-es,
+  .enrolled-students-excel-button-es {
+    font-size: 16px;
+    padding: 0.5rem 1.2rem;
+  }
+  
+  .enrolled-students-table {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  
+  .enrolled-students-table th {
+    font-size: 15px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  
+  .enrolled-students-table td {
+    font-size: 15px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,701 @@
+/* Container Styling */
+.payments-container {
+    width: 100%;
+    height: 100vh;
+    overflow-y: auto; /* Enables vertical scrolling */
+    padding: 1.9rem;
+  }
+  
+  .payments-container::-webkit-scrollbar {
+    width: 10px;
+    background-color: #ffffff;
+  }
+  
+  .payments-container::-webkit-scrollbar-thumb {
+    background-color: #b0b0b0;
+    border-radius: 5px;
+  }
+  
+  .payments-container::-webkit-scrollbar-track {
+    background-color: #ffffff;
+  }
+  
+  /* Header */
+  .header-p {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1.5rem;
+  }
+  
+  .payments-title {
+    font-size: 35px;
+    font-weight: bold;
+    color: #006400;
+  }
+  
+  .top-controls-pay {
+    display: flex;
+    justify-content: flex-start; /* Align items to the start */
+    align-items: center;
+    margin-top: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .search-and-add-pay {
+    display: flex;
+    align-items: center;
+    gap: 1rem; /* Space between the search input and the add button */
+  }
+  .search-bar {
+    width: 700px; /* Adjusted width */
+    padding: 10px;
+    border: 1px solid #ddd;
+    border-radius: 4px;
+    background-color: #fff;
+  }
+  
+  .add-button-pay {
+    padding: 0.5rem 1rem;
+    background-color: #006400;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 16px;
+    margin-left: 7rem;
+    margin-bottom: 10px;
+  }
+
+ .excel-button-pay {
+    background-color: #ffffff;
+    color: #006400;
+    border: 1px solid #006400;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+    margin-bottom: 10px;
+    margin-right: 2rem;
+  }
+  
+  .add-button-pay:hover {
+    background-color: #004d33;
+  }
+  .excel-button-pay:hover {
+    background-color: #ffffff;
+    color: #006400;
+    border: 1px solid #006400;
+  }
+  /* Flex alignment for buttons */
+  .action-buttons {
+    display: flex;
+    gap: 0.1rem;
+  }
+  .scroll-pay {
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; /* smooth scrolling on iOS */
+  }
+  
+  /* Custom scrollbar styling */
+  .scroll-pay::-webkit-scrollbar {
+    height: 3px; /* height for horizontal scrollbar */
+  }
+  
+  .scroll-pay::-webkit-scrollbar-track {
+    background: #f1f1f1; /* track color */
+    border-radius: 10px;
+  }
+  
+  .scroll-pay::-webkit-scrollbar-thumb {
+    background: #f1f1f1; /* thumb color */
+    border-radius: 3px;
+  }
+  
+  .scroll-pay::-webkit-scrollbar-thumb:hover {
+    background: #555; /* thumb color on hover */
+  }
+  
+
+  
+  /* Table Styling */
+  .payments-table {
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .payments-table th,
+  .payments-table td {
+    padding: 15px;
+    text-align: left;
+    border-bottom: 1px solid #ddd;
+    white-space: nowrap;
+  }
+  
+  .payments-table th {
+    color: #333333;
+    font-weight: bold;
+    font-size: 10px;
+  }
+  
+  .payments-table td {
+    color: #555555;
+    font-size: 10px;
+  }
+  
+  .payments-table td:last-child,
+  .payments-table td:nth-last-child(2) {
+    text-align: center;
+  }
+  
+  .payments-table tr:hover {
+    background-color: #f1f1f1;
+  }
+  
+  /* Icons */
+  .edit-icon {
+    font-size: 16px;
+    color: #006400;
+    cursor: pointer;
+  }
+  
+  .edit-icon:hover {
+    color: #004d33;
+  }
+  
+  .delete-icon {
+    font-size: 16px;
+    color: #b22222;
+    cursor: pointer;
+  }
+  
+  .delete-icon:hover {
+    color: #8b0000;
+  }
+  
+  /* Modal Styling */
+  .modal-payment {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: rgba(0, 0, 0, 0.5);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+  }
+  
+  .modal-content-payment {
+    background: #fff;
+    padding: 3rem;
+    border-radius: 10px;
+    width: 660px; /* Adjusted for a spacious form */
+    box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+    height: 85vh;
+  }
+  
+  .modal-title-pay {
+    font-size: 24px;
+    font-weight: bold;
+    color: #006400;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-container-pay {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    gap: 1rem;
+  }
+  
+  .form-row-pay {
+    flex: 1 1 calc(33.33% - 1rem); /* Three-column layout */
+    display: flex;
+    flex-direction: column;
+  }
+  
+  .form-row-pay label {
+    font-size: 14px;
+    font-weight: bold;
+    color: #004d33;
+    margin-bottom: 0.5rem;
+  }
+  
+  input,
+  select {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    width: 100%;
+    box-sizing: border-box;
+    background-color: #ffffff;
+    color: #333333;
+  }
+  
+  input:focus,
+  select:focus {
+    border-color: #006400;
+    outline: none;
+  }
+  
+  /* Modal Buttons */
+  .button-group-pay {
+    display: flex;
+    justify-content: center;
+    gap: 15rem;
+    margin-top: 1.5rem;
+  }
+  
+  .discard-button-pay {
+    background-color: #ffffff;
+    color: #006400;
+    border: 1px solid #006400;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .save-button-pay {
+    background-color: #006400;
+    color: #ffffff;
+    border: none;
+    padding: 0.5rem 1.5rem;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 14px;
+  }
+  
+  .discard-button-pay:hover {
+    background-color: #ffffff;
+    color: #006400;
+    border: 1px solid #006400;
+    }
+
+    .save-button-pay:hover {
+        background-color: #004d33;
+        }
+  
+  .modal-title-pay {
+    font-size: 24px;
+    font-weight: bold;
+    color: #006400;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  /* Responsive Design for Small Screens *//* Confirmation Modal */
+.confirmation-modal {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.confirmation-content {
+  background: #fff;
+  padding: 2rem;
+  border-radius: 10px;
+  width: 400px; /* Smaller width */
+  box-shadow: 0px 5px 15px rgba(0, 0, 0, 0.3);
+  text-align: center; /* Center-align text */
+}
+
+.confirmation-title {
+  font-size: 20px;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 1rem;
+}
+
+.confirmation-message {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.confirmation-buttons {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.confirm-button,
+.cancel-button {
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.confirm-button {
+  background-color: #006400;
+  color: #fff;
+  border: none;
+  width: 80px;
+  height: 40px;
+  margin-top: 10px;
+}
+
+.confirm-button:hover {
+  background-color: #004d33;
+}
+
+.cancel-button {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  width: 80px;
+  height: 40px;
+}
+
+.cancel-button:hover {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+}
+@media (max-width: 480px) {
+  .payments-container {
+    padding: 0;
+    margin-top: 1rem;
+    width: 100%; /* White background */
+    overflow-x: hidden;
+  }
+  .header-p {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+  }
+  .payments-title{
+    font-size: 20px;
+  }
+
+  .top-controls-pay {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-and-add-pay {
+    margin-top: -19px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; 
+  }
+  .search-and-add-pay input {
+    width: 295px;
+    padding: 0.55rem 0.4rem;
+    font-size: 10px;
+    margin-right: 80px;
+  }
+  .add-button-pay {
+    font-size: 10px;
+    padding: 0.5rem 1rem;
+    margin-left: 0px;
+    margin-right: 2px;
+  }
+
+ .excel-button-pay {
+  font-size: 10px;
+  padding: 0.45rem 0.9rem;
+  }
+  .action-buttons {
+    gap: 10px;
+  }
+  .payments-table {
+    margin-top: 10px;
+  }
+  .payments-table th {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  
+  .payments-table td {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .modal-content-payment {
+    padding: 2rem;
+    width: 390px;
+    height: 62vh;
+  }
+  .modal-title-pay {
+    font-size: 20px;
+  }
+  .form-row-pay label {
+    font-size: 10px;
+  }
+  input,
+  select {
+    font-size: 10px;
+  }
+  .button-group-pay {
+    gap: 3rem;
+  }
+  .discard-button-pay {
+    font-size: 10px;
+  }
+  .save-button-pay {
+    font-size: 10px;
+  }
+  .confirmation-content {
+    width: 330px;
+  }
+  .confirm-button {
+  font-size: 10px;
+  width: 80px;
+  height: 30px;
+  margin-top: 10px;
+}
+.cancel-button {
+  font-size: 10px;
+  width: 80px;
+  height: 30px;
+}
+}
+@media (min-width: 481px) and (max-width: 768px) {
+  .payments-container {
+    padding: 0;
+    margin-top: 2rem;
+    width: 100%; /* White background */
+    overflow-x: hidden;
+  }
+  .header-p {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+  }
+  .payments-title{
+    font-size: 25px;
+  }
+
+  .top-controls-pay {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .search-and-add-pay {
+    display: flex;
+    align-items: center;
+    margin-top: 1px;
+    gap: 10px; /* Space between the search input and the add button */
+  }
+  .search-and-add-pay input {
+    width: 350px;
+    margin-right: 1px;
+    padding: 0.55rem 0.4rem;
+    font-size: 15px;
+    margin-right: 180px;
+  }
+  .add-button-pay {
+    font-size: 13px;
+    padding: 0.4rem 1rem;
+    width: 70px;
+    margin-left: 0px;
+    margin-right: 2px;
+  }
+
+ .excel-button-pay {
+  font-size: 13px;
+  padding: 0.4rem 1rem;
+  width: 70px;
+  }
+  .action-buttons {
+    gap: 10px;
+  }
+  .payments-table {
+    margin-top: 10px;
+  }
+  .payments-table th {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  
+  .payments-table td {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .modal-content-payment {
+    padding: 2rem;
+    width: 390px;
+    height: 62vh;
+  }
+  .modal-title-pay {
+    font-size: 20px;
+  }
+  .form-row-pay label {
+    font-size: 10px;
+  }
+  input,
+  select {
+    font-size: 10px;
+  }
+  .button-group-pay {
+    gap: 3rem;
+  }
+  .discard-button-pay {
+    font-size: 10px;
+  }
+  .save-button-pay {
+    font-size: 10px;
+  }
+  .confirmation-content {
+    width: 330px;
+  }
+  .confirm-button {
+  font-size: 10px;
+  width: 80px;
+  height: 30px;
+  margin-top: 10px;
+}
+.cancel-button {
+  font-size: 10px;
+  width: 80px;
+  height: 30px;
+}
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+  .payments-container {
+    padding: 20px;
+    margin-top: 5px;
+    width: 100%;
+  }
+  .header-p {
+    margin-top: 3rem; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 92%;
+    position: fixed;
+  }
+  .payments-title{
+    font-size: 30px;
+  }
+
+  .top-controls-pay {
+    margin-bottom: 10px;
+    padding: 0;
+    margin-top: 8rem;
+  }
+  
+  .search-and-add-pay {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 1px; /* Space between the search input and the add button */
+    position: fixed;
+  }
+  .search-bar {
+    width: 450px;
+    margin-right: 1px;
+    padding: 0.5rem 1rem;
+    font-size: 10px;
+    margin-right: 330px;
+  }
+  .add-button-pay {
+    font-size: 13px;
+    padding: 0.4rem 1rem;
+    width: 70px;
+    margin-left: 0px;
+    margin-right: 2px;
+  }
+
+ .excel-button-pay {
+  font-size: 13px;
+  padding: 0.4rem 1rem;
+  width: 70px;
+  }
+  .action-buttons {
+    gap: 10px;
+  }
+  .payments-table {
+    margin-top: 3rem;
+  }
+  .payments-table th {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  
+  .payments-table td {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .modal-content-payment {
+    padding: 2rem;
+    width: 390px;
+    height: 62vh;
+  }
+  .modal-title-pay {
+    font-size: 20px;
+  }
+  .form-row-pay label {
+    font-size: 10px;
+  }
+  input,
+  select {
+    font-size: 10px;
+  }
+  .button-group-pay {
+    gap: 3rem;
+  }
+  .discard-button-pay {
+    font-size: 10px;
+  }
+  .save-button-pay {
+    font-size: 10px;
+  }
+  .confirmation-content {
+    width: 330px;
+  }
+  .confirm-button {
+  font-size: 10px;
+  width: 80px;
+  height: 30px;
+  margin-top: 10px;
+}
+.cancel-button {
+  font-size: 10px;
+  width: 80px;
+  height: 30px;
+}
+}

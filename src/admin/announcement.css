@@ -1,0 +1,419 @@
+.container-announce {
+    width: 100%;
+    height: 100vh;
+    padding-left: 2rem;
+    padding-right: 2rem;
+    padding-top: 1.5rem;
+    overflow-y: auto;
+  }
+  
+  .title-announce {
+    font-size: 35px;
+    font-weight: bold;
+    color: #006400;
+  }
+  
+  .filter-container-announce {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    color: #333333;
+    margin-top: 1.4rem;
+  }
+  
+  .search-input-announce {
+    padding: 5px 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    flex: 1;
+  }
+  
+  .date-filter-announce {
+    display: flex;
+    align-items: center;
+    gap: 5px;
+  }
+  
+  .date-input-announce {
+    font-size: 14px; /* adjust to your desired size */
+    font-family: 'Poppins', sans-serif; /* or any font you prefer */
+    color: #333; /* change to your desired text color */
+    border: 1px solid #ccc;
+    padding: 5px 10px;
+    border-radius: 4px;
+  }
+  
+  /* Optional: Style the calendar icon (this is browser dependent) */
+  .date-input-announce::-webkit-calendar-picker-indicator {
+    filter: invert(38%) sepia(79%) saturate(433%) hue-rotate(73deg) brightness(90%) contrast(90%);
+    cursor: pointer;
+  }
+  .date-input-announce:focus {
+    border-color: green;
+    box-shadow: 0 0 5px rgba(0, 128, 0, 0.5);
+    outline: none;
+  }
+  
+  .add-btn-announce {
+    padding: 10px 15px;
+    background-color: #005b2e;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+    font-size: 15px;
+  }
+  
+  .add-btn-announce:hover {
+    background-color: #004422;
+  }
+  
+  .announcement-table-announce {
+    margin-top: 2rem;
+    width: 100%;
+    border-collapse: collapse;
+  }
+  
+  .announcement-table-announce th {
+    color: #333333;
+    font-weight: bold;
+    font-size: 11px;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    border-top: 1px solid #ddd; 
+  }
+  
+  .announcement-table-announce td {
+    color: #555555;
+    font-size: 11px;
+    padding: 15px;
+    text-align: center;
+    border-bottom: 1px solid #ddd;
+    vertical-align: middle;
+  }
+  
+  .announcement-title-announce {
+    display: flex;
+    flex-direction: column;
+  }
+  .announcement-title-announce td:last-child,
+  .announcement-title-announce td:nth-last-child(1) {
+    text-align: center;
+}
+
+.announcement-title-announce tr:hover {
+  background-color: #f9f9f9;
+  
+}
+  
+  .author-info-announce {
+    display: flex;
+    flex-direction: column;
+  }
+  .action-btn-announce td{
+    display: flex;
+    justify-content: center; /* horizontal center */
+    align-items: center; /* vertical center */
+    gap: 10px;
+    width: 100%; /* important to take full width of the cell */
+  }
+  
+  .view-btn-announce,
+  .edit-btn-announce,
+  .delete-btn-announce {
+    margin-right: 20px;
+    padding: 10px 10px;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+    font-size: 11px;
+  }
+  
+  .view-btn-announce {
+    background-color: #e7f3ec;
+    color: #005b2e;
+  }
+  
+  .edit-btn-announce {
+    background-color: #e8e8f9;
+    color: #4338ca;
+  }
+  
+  .delete-btn-announce {
+    background-color: #fde8e8;
+    color: #b91c1c;
+  }
+ /* Modal */
+.modal-announce {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content-announce {
+    background-color: #fff;
+    padding: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 8px;
+    width: 600px;
+    max-width: 90%;
+    height: 92vh;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-content-announce h3 {
+    font-size: 20px;
+    font-weight: bold;
+    color: #006400;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  
+  .modal-form-announce {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1rem;
+    padding-left: 25px;
+    padding-right: 25px;
+  }
+  
+  .modal-form-group-announce {
+    display: flex;
+    flex-direction: column;
+    flex: 1;
+  
+  }
+  
+  .modal-form-group-announce.full-width {
+    flex-basis: 100%;
+  }
+  .modal-form-group-announce label {
+    font-size: 14px;
+    color: #333333;
+    margin-bottom: 0.5rem;
+    font-weight: 500;
+  }
+  
+  .modal-form-group-announce input,
+  .modal-form-group-announce select {
+    padding: 0.3rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+  }
+  .modal-form-group-announce textarea {
+    padding: 0.5rem;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 14px;
+    margin-bottom: 10px;
+    background-color: white;
+    color: #333333;
+    width: 100%;
+    height: 10vh;
+  }
+  .custom-file-upload-announce {
+    flex-direction: column;
+}
+
+.file-label-announce {
+  background-color: #fff; /* Your theme color */
+  color: white;
+  border: 1px solid #006400;
+  padding: 8px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+  display: inline-block;
+  width: 100%;
+}
+
+.file-label-announce:hover {
+  background-color: #e7f3ec; /* Darker shade for hover */
+}
+
+.custom-file-upload-announce input[type="file"] {
+  display: none;
+}
+
+  
+  .modal-row-announce {
+    display: flex;
+    gap: 20px;
+  }
+  
+  .modal-row-announce > div {
+    flex: 1;
+  }
+  
+  .modal-actions-announce-1 {
+    display: flex;
+    justify-content: space-evenly;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .cancel-btn-announce {
+    background-color: #ffff;
+    border: 1px solid #006400;
+    color: #006400;
+    padding: 8px 25px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 110px;
+  }
+  .cancel-btn-announce:hover {
+    background-color: #e7f3ec;
+    border: 1px solid #006400;
+    color: #006400;
+  }
+  .publish-btn-announce:hover {
+    background-color: #003800;
+    border: 1px solid #006400;
+    color: #fff;
+  }
+  
+  .publish-btn-announce {
+    background-color: #006400;
+    border: 1px solid #006400;
+    color: #ffff;
+    padding: 8px 25px;
+    cursor: pointer;
+    font-size: 15px;
+    width: 110px;
+  }
+
+  .modal-announce-1 {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 1000;
+  }
+  
+  .modal-content-announce-1 {
+    background-color: #fff;
+    padding: 3rem;
+    padding-left: 3rem;
+    padding-right: 3rem;
+    border-radius: 8px;
+    width: 600px;
+    max-width: 90%;
+    height: 35vh;
+    box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  }
+  
+  .modal-content-announce-1 h3 {
+    font-size: 25px;
+    font-weight: bold;
+    color: #006400;
+    text-align: center;
+    margin-bottom: 1.5rem;
+  }
+  /* Attachment button styling */
+.attachment-btn-announce {
+  background-color: #e7f3ec;
+  color: #005b2e;
+  margin-right: 20px;
+  padding: 10px 10px;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  font-size: 11px;
+  display: flex;
+  align-items: center;
+  gap: 4px;
+}
+
+.attachment-btn-announce:hover {
+  background-color: #d0e9d9;
+}
+
+/* Attachment modal styling */
+.attachment-action-btn {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  width: 120px;
+  margin: 0 5px;
+}
+
+/* View attachment in modal */
+.view-attachment {
+  padding: 10px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  margin-bottom: 10px;
+}
+
+.view-attachment a {
+  color: #006400;
+  text-decoration: none;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+}
+
+.view-attachment a:hover {
+  text-decoration: underline;
+}
+
+/* Success notification */
+.success-notification {
+  position: fixed;
+  top: 20px;
+  right: 20px;
+  background-color: #d4edda;
+  color: #155724;
+  border: 1px solid #c3e6cb;
+  border-radius: 4px;
+  padding: 15px 20px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  z-index: 1100;
+  animation: fadeIn 0.3s, fadeOut 0.3s 2.7s;
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+@keyframes fadeIn {
+  from { opacity: 0; transform: translateY(-20px); }
+  to { opacity: 1; transform: translateY(0); }
+}
+
+@keyframes fadeOut {
+  from { opacity: 1; transform: translateY(0); }
+  to { opacity: 0; transform: translateY(-20px); }
+}
+
+/* Update existing modal styles */
+.modal-content-announce-1 {
+  text-align: center;
+}
+
+.modal-content-announce-1 p {
+  margin-bottom: 2rem;
+  font-size: 16px;
+}
+
+.modal-actions-announce-1 {
+  margin-top: 2rem;
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}

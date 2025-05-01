@@ -1,0 +1,737 @@
+.subjects-container-sub {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.subjects-container-sub::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff; /* White background */
+}
+
+.subjects-container-sub::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* Light grey color for the thumb */
+  border-radius: 5px;
+}
+
+.subjects-container-sub::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+.header-subjects-sub {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+}
+
+
+.subjects-title-sub {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+/* Updated styling for the search and add button container */
+.top-controls-subjects-sub {
+  display: flex;
+  justify-content: flex-start; /* Align items to the start */
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+  gap: 1rem;
+}
+
+.search-and-add-subjects-sub {
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between the search input and the add button */
+}
+
+.search-input-subjects-sub {
+  width: 550px; /* Adjusted width */
+  padding: 10px;
+  border: 1px solid #ddd;
+  border-radius: 4px;
+  background-color: #fff;
+  margin-right: 7rem;
+}
+
+.add-button-subjects-sub {
+  padding: 0.5rem 2rem;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+}
+
+.add-button-subjects-sub:hover {
+  background-color: #004d33;
+}
+
+
+.subjects-filter-sub {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.6rem 1rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 120px;
+}
+
+.subjects-filter-sub:hover {
+  background-color: #f8f8f8;
+}
+
+.subjects-pdf-button-sub {
+  background-color: #fff;
+  color: #004d33;
+  border: 1px solid #006400;
+  padding: 0.55rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.subjects-pdf-button-sub:hover {
+  background-color: #cedfce;
+  color:#006400;
+  border: solid 1px #006400;
+}
+.subjects-table-container-sub{
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.subjects-table-container-sub::-webkit-scrollbar {
+  height: 3px; /* height for horizontal scrollbar */
+}
+
+.subjects-table-container-sub::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+  border-radius: 10px;
+}
+
+.subjects-table-container-sub::-webkit-scrollbar-thumb {
+  background: #f1f1f1; /* thumb color */
+  border-radius: 3px;
+}
+
+.subjects-table-container-sub::-webkit-scrollbar-thumb:hover {
+  background: #555; /* thumb color on hover */
+}
+.subjects-table-sub {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.subjects-table-sub th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 10px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.subjects-table-sub td {
+  color: #555555;
+  font-size: 10px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.subjects-table-sub td:last-child,
+.subjects-table-sub td:nth-last-child(2) {
+  text-align: center;
+}
+
+.subjects-table-sub tr:hover {
+  background-color: #f9f9f9;
+}
+/* Modal styles */
+.subjects-modal-sub {
+position: fixed;
+top: 0;
+left: 0;
+width: 100%;
+height: 100%;
+background-color: rgba(0, 0, 0, 0.5);
+display: flex;
+justify-content: center;
+align-items: center;
+z-index: 1000;
+}
+
+.subjects-modal-content-sub {
+background-color: #fff;
+padding: 3rem;
+padding-left: 3rem;
+padding-right: 3rem;
+border-radius: 8px;
+width: 600px;
+max-width: 90%;
+height: 88vh;
+box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.subjects-modal-title-sub {
+font-size: 20px;
+font-weight: bold;
+color: #006400;
+text-align: center;
+margin-bottom: 1.5rem;
+}
+
+.subjects-modal-form-sub {
+display: grid;
+grid-template-columns: repeat(2, 1fr);
+gap: 1.5rem;
+}
+
+.subjects-form-group-sub {
+display: flex;
+flex-direction: column;
+}
+
+.subjects-form-group-sub label {
+font-size: 14px;
+color: #333333;
+margin-bottom: 0.7rem;
+text-align: left;
+font-weight: 500;
+}
+
+.subjects-form-group-sub input {
+padding: 0.5rem;
+border: 1px solid #ccc;
+border-radius: 4px;
+font-size: 14px;
+}
+
+.subjects-form-group-sub.full-width {
+grid-column: span 2;
+}
+
+.required {
+color: red;
+}
+
+.subjects-button-group-sub {
+  display: flex;
+  justify-content: center;
+  gap: 4rem;
+  margin-top: 2rem;
+}
+
+.subjects-discard-button-sub {
+background-color: #ffffff;
+color: #006400;
+border: 1px solid #006400;
+padding: 0.5rem 1.5rem;
+border-radius: 4px;
+cursor: pointer;
+font-size: 14px;
+}
+
+.subjects-discard-button-sub:hover {
+  background-color: #cedfce;
+  color:#006400;
+  border: solid 1px #006400;
+}
+
+.subjects-save-button-sub {
+background-color: #006400;
+color: #ffffff;
+border: none;
+padding: 0.5rem 1.5rem;
+border-radius: 4px;
+cursor: pointer;
+font-size: 14px;
+width: 110px;
+}
+
+.subjects-save-button-sub:hover {
+background-color: #004d33;
+}
+
+@media (max-width: 480px) {
+  .subjects-container-sub {
+   padding: 0;
+   margin-top: 1rem;
+   width: 100%; /* White background */
+   overflow-x: hidden;
+  }
+  .header-subjects-sub {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+  }
+  .subjects-title-sub {
+    font-size: 25px;
+    z-index: 1000;  
+  }
+  .top-controls-subjects-sub {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search-and-add-subjects-sub {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center;  /* Space between the search input and the add button */
+  }
+  .search-input-subjects-sub {
+    width: 155px;
+    margin-right: 1px;
+    padding: 0.55rem 0.4rem;
+    font-size: 8px;
+    margin-right: 10px;
+    justify-content: center;
+    align-items: center;
+  }
+  .search-input-subjects-sub::placeholder {
+    font-size: 10px;
+  }
+  .add-button-subjects-sub {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+  }
+  .subjects-filter-sub {
+    font-size: 10px;
+    text-align: left;
+    width: 65px;
+    padding: 0.5rem 0.1rem;
+  }
+
+  .subjects-pdf-button-sub {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+  }
+  .subjects-table-sub {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .subjects-table-sub th {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .subjects-table-sub td {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .subjects-modal-content-sub{
+    width: 600px;
+    max-width: 90%;
+    height: 55vh;
+    padding: 2rem;
+  }
+  .subjects-modal-title-sub {
+    font-size: 16px;
+  }
+  .subjects-form-group-sub label {
+    font-size: 10px;
+    margin-bottom: 5px;
+  }
+  .subjects-form-group-sub input {
+      padding: 0.4rem;
+      font-size: 10px;
+  }
+  .subjects-form-group-sub select {
+        padding: 0.4rem;
+        font-size: 10px;
+  }
+  .subjects-button-group-sub {
+    margin-top: 1rem;
+  }
+  .subjects-discard-button-sub {
+    width: 85px;
+    font-size: 10px;
+    }
+  .subjects-save-button-sub {
+      font-size: 10px;
+      width: 85px;
+  }
+    
+    
+  
+  
+}
+@media (min-width:481px) and (max-width:768px) {
+  .subjects-container-sub {
+    padding: 0;
+    margin-top: 2rem;
+    width: 100%; /* White background */
+    overflow-x: hidden;
+  }
+  .header-subjects-sub {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+  }
+  .subjects-title-sub {
+    font-size: 30px;
+    margin-bottom: 10px;
+    z-index: 1000;  
+  }
+  .top-controls-subjects-sub {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search-and-add-subjects-sub {
+    display: flex;
+    align-items: center;
+    margin-top: 10px;
+    gap: 10px; /* Space between the search input and the add button */
+  }
+  .search-input-subjects-sub {
+    width: 350px;
+    margin-right: 1px;
+    padding: 0.55rem 0.4rem;
+    font-size: 15px;
+    margin-right: 100px;
+  }
+  .search-input-subjects-sub::placeholder {
+    font-size: 10px;
+  }
+  .add-button-subjects-sub {
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+  }
+  .subjects-filter-sub {
+    font-size: 15px;
+    text-align: left;
+    width: 100px;
+    padding: 0.5rem 0.1rem;
+  }
+
+  .subjects-pdf-button-sub {
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+  }
+  .subjects-table-sub {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .subjects-table-sub th {
+    font-size: 12px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .subjects-table-sub td {
+    font-size: 12px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .subjects-modal-content-sub{
+    width: 600px;
+    max-width: 90%;
+    height: 62vh;
+    padding: 2rem;
+  }
+  .subjects-modal-title-sub {
+    font-size: 25px;
+  }
+  .subjects-form-group-sub label {
+    font-size: 15px;
+    margin-bottom: 5px;
+  }
+  .subjects-form-group-sub input {
+      padding: 10px;
+      font-size: 15px;
+  }
+  .subjects-form-group-sub select {
+        padding: 10px;
+        font-size: 15px;
+  }
+  .subjects-button-group-sub {
+    margin-top: 2rem;
+  }
+  .subjects-discard-button-sub {
+    width: 110px;
+    font-size: 15px;
+    }
+  .subjects-save-button-sub {
+      font-size: 15px;
+      width: 110px;
+  }
+    
+    
+  
+  
+}
+@media (min-width:769px) and (max-width:1024px) {
+  .subjects-container-sub {
+    padding: 0;
+    margin-top: 1rem;
+    width: 100%; /* White background */
+    overflow-x: hidden;
+   }
+   .header-subjects-sub {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+   }
+   .subjects-title-sub {
+     font-size: 35px;
+     margin-bottom: 15px;
+     z-index: 1000;  
+   }
+   .top-controls-subjects-sub {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center;
+   }
+   .search-and-add-subjects-sub {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center;
+   }
+   .search-input-subjects-sub {
+     width: 450px;
+     margin-right: 1px;
+     padding: 0.55rem 0.4rem;
+     font-size: 20px;
+     margin-right: 150px;
+   }
+   .search-input-subjects-sub::placeholder {
+     font-size: 15px;
+   }
+   .add-button-subjects-sub {
+     font-size: 20px;
+     padding: 0.5rem 1.5rem;
+   }
+   .subjects-filter-sub {
+     font-size: 18px;
+     text-align: left;
+     width: 145px;
+     padding: 0.7rem 1.5rem;
+   }
+ 
+   .subjects-pdf-button-sub {
+     font-size: 20px;
+     padding: 0.5rem 1.5rem;
+   }
+   .subjects-table-sub {
+     width: 100%;
+     border-collapse: collapse;
+     margin-top: 10px;
+   }
+   .subjects-table-sub th {
+     font-size: 15px;
+     padding: 15px;
+     white-space: nowrap;
+   }
+   .subjects-table-sub td {
+     font-size: 15px;
+     padding: 15px;
+     white-space: nowrap;
+   }
+   .subjects-modal-content-sub{
+     width: 600px;
+     max-width: 90%;
+     height: 62vh;
+     padding: 2rem;
+   }
+   .subjects-modal-title-sub {
+     font-size: 25px;
+   }
+   .subjects-form-group-sub label {
+     font-size: 15px;
+     margin-bottom: 5px;
+   }
+   .subjects-form-group-sub input {
+       padding: 10px;
+       font-size: 15px;
+   }
+   .subjects-form-group-sub select {
+         padding: 10px;
+         font-size: 15px;
+   }
+   .subjects-button-group-sub {
+     margin-top: 2rem;
+   }
+   .subjects-discard-button-sub {
+     width: 110px;
+     font-size: 15px;
+     }
+   .subjects-save-button-sub {
+       font-size: 15px;
+       width: 110px;
+   }
+}
+/* Add these styles to your existing CSS file */
+
+.subjects-excel-button-sub {
+  background-color: #fff;
+  color: #1D6F42; /* Excel green color */
+  border: 1px solid #1D6F42;
+  padding: 0.55rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-left: 0.5rem;
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+.subjects-excel-button-sub:hover {
+  background-color: #e8f4ea;
+  color: #1D6F42;
+  border: solid 1px #1D6F42;
+}
+
+.subjects-pdf-button-sub {
+  display: flex;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/* Confirmation Modal Styles */
+.subjects-confirmation-modal-sub {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 400px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+  text-align: center;
+}
+
+.subjects-confirmation-title-sub {
+  font-size: 20px;
+  font-weight: bold;
+  color: #006400;
+  margin-bottom: 1rem;
+}
+
+.subjects-confirmation-message-sub {
+  font-size: 16px;
+  color: #333;
+  margin-bottom: 1.5rem;
+}
+
+.subjects-confirmation-buttons-sub {
+  display: flex;
+  justify-content: center;
+  gap: 1rem;
+}
+
+.subjects-confirm-button-sub {
+  background-color: #006400;
+  color: white;
+  border: none;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.subjects-confirm-button-sub:hover {
+  background-color: #004d33;
+}
+
+.subjects-cancel-button-sub {
+  background-color: #ffffff;
+  color: #333;
+  border: 1px solid #ccc;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.subjects-cancel-button-sub:hover {
+  background-color: #f1f1f1;
+}
+
+/* Mobile responsive styles for the new elements */
+@media (max-width: 480px) {
+  .subjects-excel-button-sub {
+    font-size: 12px;
+    padding: 0.5rem 1rem;
+  }
+  
+  .subjects-confirmation-modal-sub {
+    width: 300px;
+    padding: 1.5rem;
+  }
+  
+  .subjects-confirmation-title-sub {
+    font-size: 16px;
+  }
+  
+  .subjects-confirmation-message-sub {
+    font-size: 14px;
+  }
+  
+  .subjects-confirm-button-sub,
+  .subjects-cancel-button-sub {
+    font-size: 12px;
+    padding: 0.4rem 1rem;
+  }
+}
+
+@media (min-width:481px) and (max-width:768px) {
+  .subjects-excel-button-sub {
+    font-size: 15px;
+    padding: 0.5rem 1rem;
+  }
+}
+
+@media (min-width:769px) and (max-width:1024px) {
+  .subjects-excel-button-sub {
+    font-size: 20px;
+    padding: 0.5rem 1.5rem;
+  }
+}

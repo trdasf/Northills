@@ -1,0 +1,485 @@
+.parent-sidebar {
+    width: 400px;
+    background: linear-gradient(to right, #004d40, #00695c);
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/src/assets/frontpage.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    position: relative;
+}
+
+.parent-sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 99, 23, 0.5); /* Adjust color and opacity as needed */
+    z-index: 1;
+}
+
+/* Logo Section */
+.logo-section-ps {
+    display: flex;
+    align-items: center;
+    gap: 15px;
+    margin-top: 20px;
+    margin-bottom: 50px;
+    margin-left: 1rem;
+    position: relative;
+    z-index: 2; /* Ensures this content appears above the overlay */
+    color: white; /* Set text color for readability */
+}
+
+.logo-img-ps{
+    width: 70px; /* Adjust image size */
+    height: 70px;
+    background: none; /* Ensure there's no background */
+    object-fit: contain; /* Ensure the image fits inside the given size */
+}
+
+.divider-line-ps {
+    width: 10px;
+    height: 50px;
+    background-color: #ffffff; /* Dark green */
+    border-radius: 5px;
+}
+
+/* Logo Text */
+.logo-text-ps h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* Dark green */
+    font-family: Poppins;
+}
+
+.logo-text-ps h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #ffffff;
+    font-family: Poppins;
+}
+
+.menu-link-ps .icon-ps {
+    margin-right: 20px;
+    font-size: 24px;
+}
+  
+/* Section Titles */
+.section-title-ps {
+    font-size: 25px;
+    font-weight: bold;
+    font-family: Poppins;
+    margin: 20px 0 10px;
+    color: #4FA78D;
+    margin-left: 60px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2; /* Ensures this content appears above the overlay */
+    color: white; /* Set text color for readability */
+}
+
+/* Menu Links */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+
+.h3 {
+    margin-left: 50px;
+}
+
+.menu-link-ps {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2; /* Ensures this content appears above the overlay */
+    color: white; /* Set text color for readability */
+    margin-left: 90px;
+}
+
+.menu-link-ps:hover {
+    color: #55ffcc;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-link-ps svg {
+    margin-right: 8px;
+}
+
+/* Active state for selected items */
+ul li.active .menu-link-ps {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Active state for selected items */
+ul li.active .menu-link-ps {
+    font-weight: bold;
+    color: #55ffcc; /* Highlight color for active link */
+    text-decoration: underline; /* Optional underline for emphasis */
+}
+  
+.menu-link-ps:hover {
+    font-size: 16px;
+    font-weight: bold;
+    color: #55ffcc;
+}
+.sidebar-section-1-ps{
+    margin-bottom: 200px;
+}
+
+/* Sidebar Container */
+.parent-sidebar-container {
+    position: relative;
+    height: 100vh;
+}
+  
+/* Mobile Menu Button */
+.hamburger-menu-side-ps {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #006400;
+}
+
+.logo-container-side-ps {
+    display: none;
+}
+  
+/* Mobile Menu (Hidden by Default) */
+@media (max-width: 480px) {
+    .parent-sidebar {
+        z-index: 1100;
+        transform: translateX(-100%);
+        padding: 0;
+        position: fixed;
+    } 
+    
+    .parent-sidebar.active {
+        transform: translateX(0);
+        width: 260px;
+        padding: 0;
+        height: 100vh;
+    }
+    
+    .hamburger-menu-side-ps {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    
+    .navbar-side-ps {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 8vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed; /* Fix the navbar at the top */
+        top: 0; /* Align to the top of the viewport */
+        z-index: 1200; /* Ensure it stays above other elements */
+    }
+    
+    .logo-img-side-ps {
+        width: 25px;
+        height: 25px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+    
+    .divider-line-side-ps {
+        height: 30px;
+        width: 2px;
+        background-color: #006400; /* Dark green */
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+    
+    .logo-container-side-ps {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+    
+    .logo-text-side-ps h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #006400; /* Dark green */
+        font-family: Poppins;
+    }
+    
+    .logo-text-side-ps h2 {
+        margin: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006400;
+        font-family: Poppins;
+    }
+    
+    .logo-section-ps {
+        display: none;
+    }
+    
+    .sidebar-section-1-ps {
+        margin-bottom: 400px;
+        text-align: left;
+        display: inline-flexbox;
+        padding: 0;
+    }
+    
+    .section-title-ps {
+        right: 30px;
+        font-size: 25px;
+    }
+    
+    .menu-link-ps {
+        right: 45px;
+        font-size: 12px;
+    }
+    
+    .menu-link-ps:hover {
+        font-size: 14px;
+        font-weight: bold;
+    }
+    .icon-ps{
+        margin-left: 10px;
+    }
+}
+
+@media (min-width: 481px) and (max-width: 768px) {
+    .parent-sidebar {
+        z-index: 1100;
+        transform: translateX(-100%);
+        padding: 0;
+        position: fixed;
+    } 
+    
+    .parent-sidebar.active {
+        transform: translateX(0);
+        width: 350px;
+        padding: 0;
+        height: 100vh;
+    }
+    
+    .hamburger-menu-side-ps {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    
+    .navbar-side-ps {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 10vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed; /* Fix the navbar at the top */
+        top: 0; /* Align to the top of the viewport */
+        z-index: 1200; /* Ensure it stays above other elements */
+    }
+    
+    .logo-img-side-ps {
+        width: 35px;
+        height: 35px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+    
+    .divider-line-side-ps {
+        height: 30px;
+        width: 2px;
+        background-color: #006400; /* Dark green */
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+    
+    .logo-container-side-ps {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+    
+    .logo-text-side-ps h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #006400; /* Dark green */
+        font-family: Poppins;
+    }
+    
+    .logo-text-side-ps h2 {
+        margin: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006400;
+        font-family: Poppins;
+    }
+    
+    .logo-section-ps {
+        display: none;
+    }
+    
+    .sidebar-section-1-ps {
+        margin-bottom: 380px;
+        text-align: left;
+        display: inline-flexbox;
+        padding: 0;
+    }
+    
+    .section-title-ps {
+        right: 10px;
+        font-size: 30px;
+    }
+   .icon-ps {
+        right: 20px;
+        font-size: 24px;
+
+    }
+    .menu-link-ps  {
+        right: 10px;
+        font-size: 20px;
+    }
+    
+    .menu-link-ps:hover {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}
+
+@media (min-width: 769px) and (max-width: 1024px) {
+    .parent-sidebar {
+        z-index: 1100;
+        position: fixed;
+        transform: translateX(-100%);
+        transition: transform 0.1s ease-in-out;
+        padding: 0;
+        width: 1px;
+        overflow: hidden;
+    } 
+    
+    .parent-sidebar.active {
+        transform: translateX(0);
+        width: 290px;
+        padding: 0;
+    }
+    
+    .hamburger-menu-side-ps {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    
+    .navbar-side-ps {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 8vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed; /* Fix the navbar at the top */
+        top: 0; /* Align to the top of the viewport */
+        z-index: 1200; /* Ensure it stays above other elements */
+    }
+    
+    .logo-img-side-ps {
+        width: 25px;
+        height: 25px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+    
+    .divider-line-side-ps {
+        height: 30px;
+        width: 2px;
+        background-color: #006400; /* Dark green */
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+    
+    .logo-container-side-ps {
+        display: flex;
+        align-items: center;
+        margin-right: 20px;
+    }
+    
+    .logo-text-side-ps h1 {
+        margin: 0;
+        font-size: 16px;
+        font-weight: bold;
+        color: #006400; /* Dark green */
+        font-family: Poppins;
+    }
+    
+    .logo-text-side-ps h2 {
+        margin: 0;
+        font-size: 10px;
+        font-weight: normal;
+        color: #006400;
+        font-family: Poppins;
+    }
+    
+    .logo-section-ps {
+        display: none;
+    }
+    
+    .sidebar-section-1-ps {
+        margin-top: 10px;
+        text-align: left;
+        display: inline-flexbox;
+        padding: 0;
+    }
+    
+    .section-title-ps {
+        right: 10px;
+        font-size: 30px;
+    }
+    
+    .menu-link-ps {
+        right: 15px;
+        font-size: 15px;
+    }
+    
+    .menu-link-ps:hover {
+        font-size: 14px;
+        font-weight: bold;
+    }
+}

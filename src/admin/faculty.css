@@ -1,0 +1,666 @@
+/* Application Container */
+.admin-faculty-container-fac {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.admin-faculty-container-fac::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff; /* White background */
+}
+
+.admin-faculty-container-fac::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* Light grey color for the thumb */
+  border-radius: 5px;
+}
+
+.admin-faculty-container-fac::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+.admin-faculty-header-fac{
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+}
+
+
+.admin-faculty-title-fac {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.admin-faculty-top-controls-fac {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1rem;
+}
+.admin-faculty-search-bar-fac{
+  display: flex;
+  align-items: center;
+  gap: 1rem; /* Space between the search input and the add button */
+}
+.admin-faculty-search-bar-fac input {
+  width: 700px;
+  padding: 10px; /* Removed space between 10 and px */
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+  margin-right: 7rem;
+}
+
+.admin-faculty-total-fac {
+  font-size: 40px;
+  color: #333333;
+  margin-left: 665px;
+}
+
+.admin-faculty-count-total-fac{
+  font-size: 40px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.admin-faculty-name-total-fac {
+  font-size: 40px;
+  color: #333333;
+  margin-right: 8px;
+}
+.admin-faculty-add-button-fac {
+  background-color: #006400;
+  color: #ffff;
+  border: 1px solid #006400;
+  padding: 0.55rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  margin-right: 5px;
+}
+.admin-faculty-pdf-button-fac {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.55rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+.admin-faculty-pdf-button-fac:hover{
+  background-color: #cedfce;
+  color:#006400;
+  border: solid 1px #006400;
+}
+
+.admin-faculty-table-container-fac{
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.admin-faculty-table-container-fac::-webkit-scrollbar {
+  height: 3px; /* height for horizontal scrollbar */
+}
+
+.admin-faculty-table-container-fac::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+  border-radius: 10px;
+}
+
+.admin-faculty-table-container-fac::-webkit-scrollbar-thumb {
+  background: #f1f1f1; /* thumb color */
+  border-radius: 3px;
+}
+
+.admin-faculty-table-container-fac::-webkit-scrollbar-thumb:hover {
+  background: #555; /* thumb color on hover */
+}
+.admin-faculty-table-fac {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.admin-faculty-table-fac th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  border-top: 1px solid #ddd;
+}
+
+.admin-faculty-table-fac td {
+  color: #555555;
+  font-size: 11px;
+  padding: 15px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.admin-faculty-table-fac td:last-child,
+.admin-faculty-table-fac td:nth-last-child(2) {
+  text-align: center;
+}
+
+.admin-faculty-table-fac tr:hover {
+  background-color: #f9f9f9;
+}
+.admin-faculty-modal-fac {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+  
+}
+
+.admin-faculty-modal-content-fac {
+  background-color: #fff;
+  padding: 2rem;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+
+.admin-faculty-modal-content-fac h3 {
+  font-size: 30px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 1.5rem;
+}
+
+.admin-faculty-modal-content-fac label {
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 5rem;
+  text-align: left;
+  font-weight: 500;
+}
+
+.admin-faculty-modal-content-fac input {
+  width: 100%;
+  margin-bottom: 20px; /* Reduce space below the input */
+  color: #333333;
+  background-color: #fff;
+  padding: 0.5rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  font-size: 14px;
+}
+
+.admin-fac-btn-group {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center;     /* Center the buttons vertically if needed */
+  gap: 5rem;               /* Optional: Adds space between buttons */
+  margin-top: 2rem;        /* Optional: Adds space above the buttons */
+}
+
+/* Discard button */
+.admin-faculty-save-button-fac {
+  background-color: #1d563f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 110px;
+}
+
+/* Save button */
+.admin-faculty-cancel-button-fac {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+/* Centered button hover effects */
+.admin-faculty-cancel-button-fac:hover {
+  background-color: #cedfce;
+  color:#006400;
+  border: solid 1px #006400;
+}
+
+.admin-faculty-save-button-fac:hover {
+  background-color: #004d33;
+}
+  /* Delete icon styling */
+  .admin-delete-icon-faculty-fac {
+    font-size: 16px;
+    cursor: pointer;
+    color: #B22222;
+  }
+  input.error, select.error {
+    border: 2px solid red;
+  }
+  
+  .error-message {
+    color: red;
+    font-size: 0.9rem;
+    margin-top: 5px;
+  }
+  .admin-faculty-general-error-message-fac {
+    color: red;
+    font-size: 1rem;
+    margin-bottom: 10px;
+    text-align: center;
+  }
+
+  @media (max-width: 480px) {
+
+    .admin-faculty-container-fac {
+      padding: 0;
+      margin-top: 1rem;
+      width: 100%; /* White background */
+      overflow-x: hidden;
+    }
+    
+.admin-faculty-header-fac{
+  margin-top: 55px; /* Adjust this if needed */
+  padding: 0;
+  display: flex; /* Corrected */
+  justify-content: space-between;
+  align-items: center; /* Align elements vertically */
+  width: 100%;
+}
+
+
+.admin-faculty-title-fac {
+  font-size: 20px;
+  
+}
+
+.admin-faculty-top-controls-fac {
+  margin-top: 1px;
+  margin-bottom: 10px;
+  gap: 1px;
+  padding: 0;
+  width: 100%;
+  display: flex; /* Corrected */
+  justify-content: space-between;
+  align-items: center;
+}
+.admin-faculty-search-bar-fac{
+  margin-top: 1px;
+  margin-bottom: 10px;
+  gap: 1px;
+  padding: 0;
+  width: 100%;
+  display: flex; /* Corrected */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-faculty-search-bar-fac input {
+  width: 175px;
+  margin-right: 1px;
+  padding: 0.55rem 0.4rem;
+  font-size: 10px;
+  margin-right: 70px;
+}
+.admin-faculty-search-bar-fac input::placeholder{
+  font-size: 10px;
+}
+
+.admin-faculty-total-fac {
+  font-size: 20px;
+  margin-left: 1px;
+}
+
+.admin-faculty-count-total-fac{
+  font-size: 20px;
+  margin-right: 5px;
+}
+
+.admin-faculty-name-total-fac {
+  font-size: 20px;
+}
+.admin-faculty-add-button-fac {
+  font-size: 10px;
+  padding: 0.5rem 1rem;
+  margin-left: 0px;
+  margin-right: 2px;
+}
+.admin-faculty-pdf-button-fac {
+  font-size: 10px;
+  padding: 0.5rem 1rem;
+}
+.admin-faculty-table-fac {
+  margin-top: 10-x;
+}
+.admin-faculty-table-fac th {
+  font-size: 10px;
+  padding: 15px;
+  white-space: nowrap;
+}
+
+.admin-faculty-table-fac td {
+  font-size: 10px;
+  padding: 15px;
+}
+.admin-faculty-modal-content-fac {
+  width: 600px;
+  max-width: 90%;
+  height: 52vh;
+  padding: 2rem;
+}
+.admin-faculty-modal-content-fac h3 {
+  font-size: 16px;
+}
+
+.admin-faculty-modal-content-fac label {
+  font-size: 10px;
+  margin-bottom: 5px;
+}
+
+.admin-faculty-modal-content-fac input, .admin-faculty-modal-content-fac select {
+  padding: 0.4rem;
+  font-size: 10px;
+  margin-bottom: 10px;
+}
+
+.admin-fac-btn-group {
+  margin-top: 1rem; 
+}
+
+/* Discard button */
+.admin-faculty-save-button-fac {
+  font-size: 10px;
+  width: 85px;
+}
+
+/* Save button */
+.admin-faculty-cancel-button-fac {
+  font-size: 10px;
+  width: 85px;
+}
+
+  }
+
+
+  @media (min-width:481px) and (max-width: 768px) {
+
+    .admin-faculty-container-fac {
+      padding: 0;
+      margin-top: 2rem;
+      width: 100%; /* White background */
+      overflow-x: hidden;
+    }
+    
+.admin-faculty-header-fac{
+  margin-top: 55px; /* Adjust this if needed */
+  padding: 0;
+  display: flex; /* Corrected */
+  justify-content: space-between;
+  align-items: center; /* Align elements vertically */
+  width: 100%;
+}
+
+
+.admin-faculty-title-fac {
+  font-size: 30px;
+  margin-bottom: 10px;
+  z-index: 1000;  
+  
+}
+
+.admin-faculty-top-controls-fac {
+  margin-top: 1px;
+  margin-bottom: 10px;
+  gap: 1px;
+  padding: 0;
+  width: 100%;
+  display: flex; /* Corrected */
+  justify-content: space-between;
+  align-items: center;
+}
+.admin-faculty-search-bar-fac{
+  display: flex;
+  align-items: center;
+  margin-top: 20px;
+  gap: 1px; /* Space between the search input and the add button */
+}
+
+.admin-faculty-search-bar-fac input {
+  width: 450px;
+  margin-right: 1px;
+  padding: 0.55rem 0.4rem;
+  font-size: 15px;
+  margin-right: 120px;
+}
+.admin-faculty-search-bar-fac input::placeholder{
+  font-size: 12px;
+}
+
+.admin-faculty-total-fac {
+  font-size: 30px;
+  margin-left: 0px;
+  padding: 0;
+}
+
+.admin-faculty-count-total-fac{
+  font-size: 30px;
+}
+
+.admin-faculty-name-total-fac {
+  font-size: 30px;
+}
+.admin-faculty-add-button-fac {
+  font-size: 15px;
+  padding: 0.5rem 1rem;
+}
+.admin-faculty-pdf-button-fac {
+  font-size: 15px;
+  padding: 0.5rem 1rem;
+}
+.admin-faculty-table-fac {
+  margin-top: 10px;
+}
+.admin-faculty-table-fac th {
+  font-size: 15px;
+  padding: 15px;
+  white-space: nowrap;
+}
+
+.admin-faculty-table-fac td {
+  font-size: 15px;
+  padding: 15px;
+}
+.admin-faculty-modal-content-fac {
+  width: 600px;
+  max-width: 90%;
+  height: 52vh;
+  padding: 2rem;
+}
+.admin-faculty-modal-content-fac h3 {
+  font-size: 25px;
+}
+
+.admin-faculty-modal-content-fac label {
+  font-size: 15px;
+  margin-bottom: 5px;
+}
+
+.admin-faculty-modal-content-fac input, .admin-faculty-modal-content-fac select {
+  padding: 0.4rem;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+.admin-faculty-modal-content-fac input::placeholder, .admin-faculty-modal-content-fac select::placeholder {
+  padding: 0.4rem;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.admin-fac-btn-group {
+  margin-top: 1rem; 
+}
+
+/* Discard button */
+.admin-faculty-save-button-fac {
+  font-size: 15px;
+  width: 110px;
+}
+
+/* Save button */
+.admin-faculty-cancel-button-fac {
+  font-size: 15px;
+  width: 110px;
+}
+
+  }
+
+  @media (min-width:769px) and (max-width: 1024px) {
+
+    .admin-faculty-container-fac {
+      padding: 0;
+      margin-top: 1rem;
+      width: 100%; /* White background */
+      overflow-x: hidden;
+    }
+    
+.admin-faculty-header-fac{
+  margin-top: 55px; /* Adjust this if needed */
+  padding: 0;
+  display: flex; /* Corrected */
+  justify-content: space-between;
+  align-items: center; /* Align elements vertically */
+  width: 100%;
+}
+
+
+.admin-faculty-title-fac {
+  font-size: 35px;
+  
+}
+
+.admin-faculty-top-controls-fac {
+  margin-top: 1px;
+  margin-bottom: 10px;
+  gap: 1px;
+  padding: 0;
+  width: 100%;
+  display: flex; /* Corrected */
+  justify-content: space-between;
+  align-items: center;
+}
+.admin-faculty-search-bar-fac{
+  margin-top: 1px;
+  margin-bottom: 10px;
+  gap: 1px;
+  padding: 0;
+  width: 100%;
+  display: flex; /* Corrected */
+  justify-content: space-between;
+  align-items: center;
+}
+
+.admin-faculty-search-bar-fac input {
+  width: 480px;
+  margin-right: 1px;
+  padding: 0.55rem 0.4rem;
+  font-size: 20px;
+  margin-right: 280px;
+}
+.admin-faculty-search-bar-fac input::placeholder{
+  font-size: 15px;
+}
+
+.admin-faculty-total-fac {
+  font-size: 35px;
+  margin-left: 0px;
+  padding: 0;
+}
+
+.admin-faculty-count-total-fac{
+  font-size: 35px;
+}
+
+.admin-faculty-name-total-fac {
+  font-size: 35px;
+}
+.admin-faculty-add-button-fac {
+  font-size: 20px;
+  padding: 0.5rem 1.5rem;
+}
+.admin-faculty-pdf-button-fac {
+  font-size: 20px;
+  padding: 0.5rem 1.5rem;
+}
+.admin-faculty-table-fac {
+  margin-top: 10px;
+}
+.admin-faculty-table-fac th {
+  font-size: 15px;
+  padding: 15px;
+  white-space: nowrap;
+}
+
+.admin-faculty-table-fac td {
+  font-size: 15px;
+  padding: 15px;
+}
+.admin-faculty-modal-content-fac {
+  width: 600px;
+  max-width: 90%;
+  height: 75vh;
+  padding: 2rem;
+}
+.admin-faculty-modal-content-fac h3 {
+  font-size: 30px;
+}
+
+.admin-faculty-modal-content-fac label {
+  font-size: 18px;
+  margin-bottom: 7px;
+}
+
+.admin-faculty-modal-content-fac input, .admin-faculty-modal-content-fac select {
+  padding: 0.5rem;
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+.admin-faculty-modal-content-fac input::placeholder, .admin-faculty-modal-content-fac select::placeholder {
+  padding: 0.4rem;
+  font-size: 15px;
+  margin-bottom: 10px;
+}
+
+.admin-fac-btn-group {
+  margin-top: 1rem; 
+}
+
+/* Discard button */
+.admin-faculty-save-button-fac {
+  font-size: 20px;
+  height: 52px;
+  width: 130px;
+}
+
+/* Save button */
+.admin-faculty-cancel-button-fac {
+  font-size: 20px;
+  width: 130px;
+  height: 52px;
+}
+
+  }

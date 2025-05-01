@@ -1,0 +1,472 @@
+.admin-sidebar {
+    width: 400px;
+    background: linear-gradient(to right, #004d40, #00695c);
+    color: white;
+    height: 100vh;
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    align-items: start;
+    font-family: 'Poppins', sans-serif;
+    background-image: url('/src/assets/frontpage.jpg');
+    background-size: cover;
+    background-position: center;
+    justify-content: center;
+    position: relative;
+    
+}
+
+.admin-sidebar::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 99, 23, 0.5); /* Adjust color and opacity as needed */
+    z-index: 1;
+}
+/* Logo Section */
+.logo-section-as {
+    display: flex;
+    align-items: center;
+    margin-top: 20px;
+    gap: 15px;
+    margin-bottom: 10px;
+    margin-left: 1rem;
+    position: relative;
+    z-index: 2; /* Ensures this content appears above the overlay */
+    color: white; /* Set text color for readability */
+}
+
+.logo-img-as {
+    width: 90%; /* Adjust image size */
+    height: 90px;
+    background: none; /* Ensure there's no background */
+    object-fit: contain; /* Ensure the image fits inside the given size */
+}
+
+.divider-line-as {
+    width: 10px;
+    height: 50px;
+    background-color: #ffffff; /* Dark green */
+    border-radius: 5px;
+}
+
+/* Logo Text */
+.logo-text-as h1 {
+    margin: 0;
+    font-size: 2rem;
+    font-weight: bold;
+    color: #ffffff; /* Dark green */
+    font-family: Poppins;
+}
+
+.logo-text-as h2 {
+    margin: 0;
+    font-size: 1rem;
+    font-weight: normal;
+    color: #ffffff;
+    font-family: Poppins;
+}
+.menu-link .icon {
+    margin-right: 20px;
+    font-size: 24px;
+  }
+  
+
+/* Section Titles */
+.section-title {
+    font-size: 20px;
+    font-weight: bold;
+    font-family: Poppins;
+    margin: 20px 0 10px;
+    color: #4FA78D;
+    margin-left: 60px;
+    text-transform: uppercase;
+    position: relative;
+    z-index: 2; /* Ensures this content appears above the overlay */
+    color: white; /* Set text color for readability */
+}
+
+
+/* Menu Links */
+ul {
+    list-style-type: none;
+    padding: 0;
+    margin: 0;
+    width: 100%;
+}
+.h3 {
+    margin-left: 50px;
+}
+
+.menu-link {
+    text-decoration: none;
+    color: white;
+    font-size: 16px;
+    display: flex;
+    align-items: center;
+    padding: 10px 0;
+    cursor: pointer;
+    position: relative;
+    z-index: 2; /* Ensures this content appears above the overlay */
+    color: white; /* Set text color for readability */
+    margin-left: 90px;
+}
+
+.menu-link:hover {
+    color: #55ffcc;
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.menu-link svg {
+    margin-right: 8px;
+}
+
+/* Active state for selected items */
+ul li.active .menu-link {
+    font-weight: bold;
+    text-decoration: underline;
+}
+
+/* Active state for selected items */
+ul li.active .menu-link {
+    font-weight: bold;
+    color: #55ffcc; /* Highlight color for active link */
+    text-decoration: underline; /* Optional underline for emphasis */
+  }
+  
+  .menu-link:hover {
+    font-size: 16px;
+    font-weight: bold;
+    color: #55ffcc;
+  }
+
+
+/* Sidebar Container */
+.admin-sidebar-container {
+    position: relative;
+    height: 100vh;
+    
+  }
+  
+  /* Mobile Menu Button */
+  .hamburger-menu-side {
+    display: none;
+    cursor: pointer;
+    font-size: 30px;
+    color: #006400;
+  }
+  .logo-container-side{
+    display: none;
+  }
+
+
+  
+  /* Mobile Menu (Hidden by Default) */
+  @media (max-width: 480px) {
+    .admin-sidebar {
+      z-index: 1100;
+      
+  }
+    .hamburger-menu-side {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    .navbar-side {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 8vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed; /* Fix the navbar at the top */
+        top: 0; /* Align to the top of the viewport */
+        z-index: 1200; /* Ensure it stays above other elements */
+      }
+    
+      .logo-img-side {
+        width: 25px;
+        height: 25px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+  
+    .divider-line-side {
+        height: 30px;
+        width: 2px;
+        background-color: #006400; /* Dark green */
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+  
+    .logo-container-side {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      
+  }
+  
+    .logo-text-side h1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #006400; /* Dark green */
+      font-family: Poppins;
+    }
+  
+    .logo-text-side h2 {
+      margin: 0;
+      font-size: 10px;
+      font-weight: normal;
+      color: #006400;
+      font-family: Poppins;
+    }
+  
+    .admin-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.1s ease-in-out;
+        padding: 0%;
+
+    } 
+    
+    .admin-sidebar.active {
+        transform: translateX(0);
+        width: 250px;
+        padding: 0%;
+    }
+    .logo-section-as{
+      display: none;
+    }
+    .sidebar-section-1{
+      margin-bottom: 130px;
+      text-align: left;
+      display: inline-flexbox;
+      padding: 0;
+    }
+    .section-title{
+      right: 40px;
+      font-size: 16px;
+    }
+    .menu-link{
+      right: 55px;
+      font-size: 14px;
+    }
+    .menu-link:hover {
+      font-size: 14px;
+      font-weight: bold;
+  }
+  }
+  @media (min-width: 481px) and (max-width: 786px) {
+    .admin-sidebar {
+      z-index: 1100;
+      
+  }
+    .hamburger-menu-side {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    .navbar-side {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 10vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed; /* Fix the navbar at the top */
+        top: 0; /* Align to the top of the viewport */
+        z-index: 1200; /* Ensure it stays above other elements */
+      }
+    
+      .logo-img-side {
+        width: 35px;
+        height: 35px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+  
+    .divider-line-side {
+        height: 30px;
+        width: 2px;
+        background-color: #006400; /* Dark green */
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+  
+    .logo-container-side {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      
+  }
+  
+    .logo-text-side h1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #006400; /* Dark green */
+      font-family: Poppins;
+    }
+  
+    .logo-text-side h2 {
+      margin: 0;
+      font-size: 10px;
+      font-weight: normal;
+      color: #006400;
+      font-family: Poppins;
+    }
+  
+    .admin-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.1s ease-in-out;
+        padding: 0%;
+
+    } 
+    
+    .admin-sidebar.active {
+        transform: translateX(0);
+        width: 250px;
+        padding: 0%;
+    }
+    .logo-section-as{
+      display: none;
+    }
+    .sidebar-section-1{
+      margin-bottom: 130px;
+      text-align: left;
+      display: inline-flexbox;
+      padding: 0;
+    }
+    .section-title{
+      right: 40px;
+      font-size: 16px;
+    }
+    .menu-link{
+      right: 55px;
+      font-size: 14px;
+    }
+    .menu-link:hover {
+      font-size: 14px;
+      font-weight: bold;
+  }
+  }
+  @media (min-width: 481px) and (max-width: 1024px) {
+    .admin-sidebar {
+      z-index: 1100;
+      position: fixed;
+      
+  }
+    .hamburger-menu-side {
+        display: block;
+        margin-right: 1rem;
+        margin-top: 10px;
+        font-size: 40px;
+    }
+    .navbar-side {
+        display: flex;
+        padding: 10px;
+        justify-content: space-between;
+        background-color: #fff;
+        box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+        height: 8vh;
+        width: 100%;
+        align-items: center;
+        font-family: Poppins;
+        font-weight: normal;
+        font-size: 5px;
+        position: fixed; /* Fix the navbar at the top */
+        top: 0; /* Align to the top of the viewport */
+        z-index: 1200; /* Ensure it stays above other elements */
+      }
+    
+      .logo-img-side {
+        width: 25px;
+        height: 25px;
+        margin-right: 1px;
+        margin-left: 1px;
+    }
+  
+    .divider-line-side {
+        height: 30px;
+        width: 2px;
+        background-color: #006400; /* Dark green */
+        margin: 0 5px;
+        border-radius: 5px;
+    }
+  
+    .logo-container-side {
+      display: flex;
+      align-items: center;
+      margin-right: 20px;
+      
+  }
+  
+    .logo-text-side h1 {
+      margin: 0;
+      font-size: 16px;
+      font-weight: bold;
+      color: #006400; /* Dark green */
+      font-family: Poppins;
+    }
+  
+    .logo-text-side h2 {
+      margin: 0;
+      font-size: 10px;
+      font-weight: normal;
+      color: #006400;
+      font-family: Poppins;
+    }
+  
+    .admin-sidebar {
+        transform: translateX(-100%);
+        transition: transform 0.1s ease-in-out;
+        padding: 0%;
+        width: 1px;
+        overflow: hidden;
+
+    } 
+    
+    .admin-sidebar.active {
+        transform: translateX(0);
+        width: 250px;
+        padding: 0%;
+    }
+    .logo-section-as{
+      display: none;
+    }
+    .sidebar-section-1{
+      margin-top: 10px;
+      text-align: left;
+      display: inline-flexbox;
+      padding: 0;
+    }
+    .section-title{
+      right: 40px;
+      font-size: 16px;
+    }
+    .menu-link{
+      right: 55px;
+      font-size: 14px;
+    }
+    .menu-link:hover {
+      font-size: 14px;
+      font-weight: bold;
+  }
+  }
+  

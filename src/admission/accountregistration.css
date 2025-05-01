@@ -1,0 +1,339 @@
+.admin-container {
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .regis-background-image {
+    background-image: url('/src/assets/frontpage.jpg');
+    background-size: cover;
+    background-position: center;
+    height: 100vh;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    position: relative;
+  }
+  
+  .regis-background-image::before {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.5); /* Darker overlay */
+    z-index: 1;
+  }
+  
+  .registration-box-ar {
+    position: relative;
+    z-index: 2;
+    background-color: white;
+    padding: 40px;
+    border-radius: 10px;
+    box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.2);
+    text-align: center;
+    width: 700px;
+    height: 95vh;
+  }
+  
+  .logo-img-ar {
+    width: 60px;
+    height: 60px;
+    margin-bottom: 10px;
+  }
+  
+  .regis-system-title {
+    font-size: 25px;
+    font-weight: bold;
+    color: #006000;
+    margin-bottom: 5px;
+    text-transform: uppercase;
+  }
+  
+  .register-title-ar {
+    font-size: 25px;
+    font-weight: bold;
+    color: #006000;
+    margin-bottom: 20px;
+  }
+  
+  .separator-ar {
+    width: 90%;
+    height: 2px;
+    background-color: #006000;
+    border: none;
+    margin: 10px auto;
+  }
+  
+  .input-field-ar {
+    width: 80%;
+    padding: 10px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+    height:38px;
+  }
+  
+  .password-container-arr {
+    position: relative;
+    width: 100%;
+  }
+  
+  .password-container-arr input {
+    width: 80%;
+    padding: 12px;
+    margin: 10px 0;
+    border: 2px solid #ccc;
+    border-radius: 5px;
+    font-size: 16px;
+    background-color: white;
+    color: #333;
+  }
+  
+  .eye-icon-arr {
+    position: absolute;
+    top: 50%;
+    right: 80px;
+    transform: translateY(-50%);
+    cursor: pointer;
+    font-size: 14px;
+    color: #003300;
+  }
+  .eye-icon-arr:active {
+    background-color: white;
+    border: 1px solid #ccc;
+  }
+  
+  .eye-icon-arr:focus {
+    background-color: white;
+    border: 1px solid #ccc;
+  }
+  
+  .regis-button-ar {
+    width: 40%;
+    height: 5.5vh;
+    padding: 10px;
+    background-color: #004d00;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    font-size: 15px;
+    cursor: pointer;
+    margin-top: 10px;
+    font-weight: bold;
+    text-transform: uppercase;
+    margin-bottom: 10px;
+  }
+  
+  .regis-button-ar:hover {
+    background-color: #003300;
+  }
+
+.login-message-ar {
+    margin-top: 5px;
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 2rem;
+}
+
+.login-link-ar{
+    color: #004d00;
+    text-decoration: underline;
+    font-weight: bold;
+    font-size: 24px;
+    margin-top: 10px;
+}
+
+.login-link-ar:hover {
+    color: #4a724a;
+}
+.login-message-ar {
+    color: #333;
+    font-size: 14px;
+    margin-top: 10px;
+    text-align: center;
+}
+
+.login-message-ar p{
+    font-size: 16px;
+    bottom: 30px;
+    font-weight: 200;
+}
+  
+
+.welcome-title-ar {
+    font-size: 20px;
+    color: #12a712;
+    font-weight: 600;
+    margin-bottom: 10px;
+    font-family: Poppins;
+}
+
+.highlight {
+    border: 1px solid red;
+}
+
+.inline-error {
+    color: red;
+    font-size: 12px;
+    margin-top: 5px;
+    text-align: center;
+}
+
+.modal-overlay-ar {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.7);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 1000;
+}
+
+.modal-content-ar {
+    background-color: #067655;
+    color: white;
+    padding: 20px;
+    border-radius: 10px;
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+    text-align: center;
+    width: 300px;
+}
+
+.modal-content-ar h2 {
+    font-size: 15px;
+    color: #067655;
+    margin-bottom: 20px;
+    text-align: center;
+    line-height: 1.4;
+}
+
+.modal-close-button-ar {
+    background-color: #004d00;
+    color: white;
+    border: none;
+    padding: 10px 20px;
+    border-radius: 5px;
+    cursor: pointer;
+    text-align: center;
+    font-size: 16px;
+    margin-top: 10px;
+    font-family: Poppins;
+}
+
+.modal-close-button-ar:hover {
+    background-color: #006600;
+}
+
+/* Styles for the login message */
+.login-message {
+    
+    font-size: 14px;
+    color: #333;
+    margin-bottom: 5rem;
+    font-weight: 600;
+    font-family: Poppins;
+}
+
+.login-link {
+    color: #004d00;
+    text-decoration: none;
+    font-weight: bold;
+    font-size: 24px;
+    cursor: pointer;
+}
+
+@media (max-width: 480px) {
+    .registration-box-ar {
+      width: 90%;
+      padding: 20px;
+      height: 80vh;
+    }
+    .logo-img-ar{
+        width: 50px;
+        height: 50px;
+    }
+  
+    .regis-system-title {
+      font-size: 20px;
+    }
+  
+    .welcome-title-ar {
+      font-size: 18px;
+    }
+    .register-title-ar {
+        font-size: 18px;
+      }
+  
+    .input-field-ar {
+      font-size: 14px;
+      padding: 10px;
+    }
+  
+    .regis-button-ar {
+      font-size: 14px;
+      margin-bottom: 10px;
+      height: 5vh;
+    }
+    .view-icon-button-ads {
+      position: absolute;
+      top: 50%;
+      right: 25px;
+      height: 4.5vh;
+      transform: translateY(-50%);
+      background: none;
+      border: none;
+      cursor: pointer;
+      font-size: 15px;
+      color: #003300;
+    }
+    .sign-up-sua {
+        margin-top: 10px;
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 6rem;
+    }
+    
+    .sua {
+        font-size: 14px;
+        color: #333;
+        margin-bottom: 5rem;
+        font-weight: 600;
+        font-family: poppins;
+    }
+    .login-link-ar {
+        color: #004d00;
+        text-decoration: underline;
+        font-weight: bold;
+        font-size: 20px;
+    }
+    
+    .login-link-ar:hover {
+        color: #02b002;
+    }
+    .login-message-ar{
+        font-size: 10px;
+        bottom: 30px;
+        font-weight: 200;
+    }
+  }
+ 
+  @media (min-width: 481px) and (max-width: 768px) {
+    .registration-box-ar{
+      width: 90%;
+      padding: 20px;
+      height: 70vh;
+    }
+  }
+ 

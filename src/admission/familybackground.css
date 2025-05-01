@@ -1,0 +1,344 @@
+.family-background-form {
+  width: 100%;
+  height: 100vh;
+  padding: 3rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+  }
+  
+  .family-background-form::-webkit-scrollbar {
+    width: 10px;
+    background-color: #ffffff; /* White background */
+  }
+  
+  .family-background-form::-webkit-scrollbar-thumb {
+    background-color: #b0b0b0; /* Light grey color for the thumb */
+    border-radius: 5px;
+  }
+  
+  .family-background-form::-webkit-scrollbar-track {
+    background-color: #ffffff; /* White background for the track */
+  }
+  
+  .family-background-form h2 {
+    color: #1d563f;
+    margin-bottom: 2rem;
+    font-size: 30px;
+    font-family: poppins;
+  } 
+
+  .family-background-form h4 {
+    color: #1d563f;
+    margin-bottom: 1rem;
+    font-size: 15px;
+    font-family: Poppins;
+  } 
+
+  .separator {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #636161;
+  }
+
+  .form-row-fb {
+    display: flex;
+    flex-direction: row;
+    gap: 1rem;
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group-fb{
+    flex: 1;
+  }
+  .form-group-fb-fb{
+    flex: 0.28;
+  }
+
+  .form-group-fb-ope{
+    flex: 3;
+  }
+
+
+  .form-group-fb-parents{
+    flex: 1.5;
+  }
+
+  .form-group-fb-sibling{
+    flex: 1;
+    flex-direction: row;
+  }
+
+  .form-group-fb label, .form-group-fb-fb label, .form-group-fb-parents label, .form-group-fb-sibling label, .form-group-fb-ope label{
+    display: block;
+    margin-bottom: 0.5rem;
+    font-size: 14px;
+    color: #333;
+    font-family: Inter;
+  }
+  
+  .form-group-fb input,
+.form-group-fb select, .form-group-fb-fb input,
+.form-group-fb-fb select, .form-group-fb-parents input,
+.form-group-fb-parents select, .form-group-fb-ope input, .form-group-fb-ope select{
+  width: 100%;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-family: Inter;
+}
+.form-group-fb-fb input{
+  padding: 0.68rem;
+}
+.form-group-fb-sibling input{
+  width: 291px;
+  padding: 0.75rem;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  background-color: white;
+  color: black;
+  font-family: Inter;
+}
+  
+  .button-container {
+    display: flex;
+    justify-content: space-between;
+    margin-top: 20px;
+  }
+  
+  .separator-fb {
+    margin: 2rem 0;
+    border: none;
+    border-top: 1px solid #636161;
+  }
+  .previous-button-fb {
+    background-color: #77a99b;
+    width: 8rem;
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+
+  .next-button-fb{
+    background-color: #006c4c;
+    width: 8rem;
+    text-align: center;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+ .next-button-fb:hover {
+    background-color: #009523;
+  }
+  .previous-button:hover {
+    background-color: #54805e;
+  }
+
+  /* Modal overlay */
+.modal-fb {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100vh;
+  background-color: rgba(73, 73, 73, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+/* Modal content */
+.modal-content-fb {
+  background-color: white;
+  padding: 30px;
+  border-radius: 5px;
+  width: 600px;
+  text-align: center;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+}
+
+.modal-content-fb h3 {
+  margin-bottom: 25px;
+  color: #004d00;
+  font-size: 24px;
+}
+
+.modal-content-fb input {
+  width: 100%;
+  padding: 8px;
+  margin: 5px 0;
+  border: 1px solid #ccc;
+  border-radius: 3px;
+  background-color: #fff;
+  margin-bottom: 25px;
+  color: #333;
+}
+
+.add-modal-button {
+  margin: 10px 5px;
+  padding: 8px 15px;
+  background-color: #004d00;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 30%;
+  margin-right: 0;
+}
+
+.add-modal-button:hover {
+  background-color: #006400;
+}
+
+.cancel-button {
+  margin: 10px 5px;
+  padding: 8px 15px;
+  background-color: #004d00;
+  color: white;
+  border: none;
+  border-radius: 3px;
+  cursor: pointer;
+  width: 30%;
+}
+
+.modal-button:hover {
+  background-color: #006400;
+}
+
+/* Add sibling button styling */
+.add-sibling-button-fb {
+  margin-top: 15px;
+  font-size: 14px;
+  background-color: #004d00;
+  color: white;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+.add-sibling-button-fb:hover {
+  background-color: #006400;
+}
+@media (max-width: 480px) {
+  .family-background-form{
+    padding: 4rem; /* Reduce padding on smaller screens */
+    margin-top: 10rem;
+  }
+
+  .button-container {
+    justify-content: center;
+  }
+
+  .next-button-fb {
+    width: 100%;
+  }
+
+  .form-row-fb {
+    flex-direction: column; /* Stack fields vertically */
+    gap: 1rem; /* Reduce gap between elements */
+  }
+  
+
+  .next-button-fb {
+    margin-left: 0;
+    width: 100%; /* Make the button full-width on smaller screens */
+    text-align: center;
+  }
+  .personal-info-form {
+    padding: 2rem; /* Further reduce padding for mobile */
+    margin-top: 16rem;
+  }
+
+  .family-background-form h2 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .form-group-fb input,
+  .form-group-fb select {
+    padding: 0.5rem; /* Adjust padding for inputs */
+  }
+
+  .button-container {
+    margin-top: 20px;
+    margin-bottom: 40px;
+  }
+  .previous-button-fb {
+    width: 120px;
+    height: 40px;
+    font-size: 14px;
+  }
+  .next-button-fb {
+    width: 120px;
+    font-size: 14px;
+  }
+  .add-sibling-button {
+    margin-top: 10px;
+    width: 120px;
+    border-radius: 5px;
+    cursor: pointer;
+  }
+  
+}
+
+@media (min-width:481px) and (max-width: 768px) {
+  .personal-info-form {
+    padding: 20px;
+  }
+
+  .button-container {
+    justify-content: center;
+  }
+
+  .next-button-pi {
+    width: 100%;
+  }
+  .personal-info-form {
+    padding: 4rem; /* Reduce padding on smaller screens */
+  }
+
+  .form-row {
+    flex-direction: column; /* Stack fields vertically */
+    gap: 1rem; /* Reduce gap between elements */
+  }
+  
+
+  .next-button-pi {
+    margin-left: 0;
+    width: 100%; /* Make the button full-width on smaller screens */
+    text-align: center;
+  }
+  .personal-info-form {
+    padding: 2rem; /* Further reduce padding for mobile */
+    margin-top: 17rem;
+  }
+
+  .personal-info-form h2 {
+    font-size: 20px; /* Adjust font size for smaller screens */
+  }
+
+  .form-group input,
+  .form-group select {
+    padding: 0.5rem; /* Adjust padding for inputs */
+  }
+
+  .button-container {
+    justify-content: center; /* Center align buttons */
+  }
+}
+@media (min-width:481px) and (max-width: 768px) {
+  .family-background-form{
+    padding: 2rem; /* Further reduce padding for mobile */
+    margin-top: 16rem;
+    }
+}
+@media (min-width:769px) and (max-width: 1024px) {
+  .family-background-form {
+    padding: 2rem; /* Further reduce padding for mobile */
+    margin-top: 16rem;
+    }
+}

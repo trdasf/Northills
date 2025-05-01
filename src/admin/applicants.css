@@ -1,0 +1,497 @@
+/* Application Container */
+.applicants-container-ap {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+}
+
+.applicants-container-ap::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff; /* White background */
+}
+
+.applicants-container-ap::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* Light grey color for the thumb */
+  border-radius: 5px;
+}
+
+.applicants-container-ap::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+.header-ap {
+  display: flex;
+  flex-direction: row;
+  gap: 1rem;
+  color: #333333;
+}
+
+
+.application-title-ap {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.top-controls-applicants-ap {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 1rem;
+  margin-bottom: 1.5rem;
+}
+
+.search-bar-applicants-ap input {
+  width: 700px;
+  padding: 10px; /* Removed space between 10 and px */
+  border: 1px solid #ddd;
+  background-color: #fff;
+  border-radius: 4px;
+}
+
+.total-label-ap {
+  font-size: 40px;
+  color: #333333;
+  margin-left: 530px;
+}
+
+.total-count-ap {
+  font-size: 40px;
+  font-weight: bold;
+  color: #006400;
+}
+
+.schedule-button-ap {
+  padding: 0.5rem 1rem;
+  background-color: #006400;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 16px;
+  margin-right: 15px;
+}
+
+.application-table-ap {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+.application-table-ap th,
+.application-table-ap td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+}
+
+.application-table-ap th {
+  color: #333333;
+  font-weight: bold;
+  font-size: 11px;
+  border-top: 1px solid #ddd;
+}
+
+.application-table-ap td {
+  color: #555555;
+  font-size: 11px;
+}
+
+.application-table-ap td:last-child,
+.application-table-ap td:nth-last-child(2) {
+  text-align: center;
+}
+
+
+.application-table-ap tr:hover {
+  background-color: #f9f9f9;
+}
+/* Scrollable Table Container */
+.table-container-ap {
+  height: calc(100vh - 200px); /* Adjust height based on your layout */
+  overflow-y: scroll; /* Enable vertical scrolling */
+  overflow-x: hidden; /* Hide horizontal scroll */
+}
+.view-icon-ap {
+  font-size: 15px;
+  text-align: center;
+  }
+  .application-table-container-ap{
+    width: 100%;
+    overflow-x: auto;
+    -webkit-overflow-scrolling: touch; 
+  }
+  
+  .application-table-container-ap::-webkit-scrollbar {
+    height: 3px; /* height for horizontal scrollbar */
+  }
+  
+  .application-table-container-ap::-webkit-scrollbar-track {
+    background: #f1f1f1; /* track color */
+    border-radius: 10px;
+  }
+  
+  .application-table-container-ap::-webkit-scrollbar-thumb {
+    background: #f1f1f1; /* thumb color */
+    border-radius: 3px;
+  }
+  
+  .application-table-container-ap::-webkit-scrollbar-thumb:hover {
+    background: #555; /* thumb color on hover */
+  }
+@media (max-width: 480px) {
+
+  .applicants-container-ap{
+    padding: 0;
+    margin-top: 1rem;
+    width: 100%; /* White background */
+    overflow-x: hidden;
+  }
+  .header-ap {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+}
+
+.header-ap h2, 
+.header-ap p {
+    margin-bottom: 15px; /* Removes default browser margin */
+    padding: 0;
+}
+  
+  .application-title-ap {
+    font-size: 20px;
+  }
+  .total-label-ap {
+    font-size: 20px;
+    margin-left: 105px;
+    margin-right: 10px;
+  }
+  
+  .total-count-ap {
+    font-size: 20px;
+    
+  }
+  .top-controls-applicants-ap {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+  }
+  .search-bar-applicants-ap {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 40px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+  }
+  
+  .search-bar-applicants-ap input {
+    width: 215px;
+    padding: 0.55rem 0.4rem;
+    font-size: 10px;
+  }
+
+  .search-bar-applicants-ap input::placeholder {
+    font-size: 10px;
+  }
+  .schedule-button-ap{
+  font-size: 12px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  }
+  .application-table-ap {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .application-table-ap th {
+    color: #333333;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .application-table-ap td {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 481px) and  (max-width: 1024px) {
+
+  .applicants-container-ap{
+    padding: 0;
+    margin-top: 2rem;
+    width: 100%; /* White background */
+    overflow-x: hidden;
+  }
+  .header-ap {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; 
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+}
+
+.header-ap h2, 
+.header-ap p {
+    margin-bottom: 15px; /* Removes default browser margin */
+    padding: 0;
+}
+  
+  .application-title-ap {
+    font-size: 20px;
+  }
+  .total-label-ap {
+    font-size: 20px;
+    margin-left: 105px;
+  }
+  
+  .total-count-ap {
+    font-size: 15px;
+    
+  }
+  .top-controls-applicants-ap {
+    margin-top: 0px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+  }
+  .search-bar-applicants-ap {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 40px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+  }
+  
+  .search-bar-applicants-ap input {
+    width: 215px;
+    margin-right: 10px;
+    padding: 0.55rem 0.4rem;
+    font-size: 10px;
+  }
+
+  .search-bar-applicants-ap input::placeholder {
+    font-size: 10px;
+  }
+  .schedule-button-ap{
+  font-size: 12px;
+  margin-left: 40px;
+  margin-bottom: 10px;
+  }
+  .application-table-ap {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .application-table-ap th {
+    color: #333333;
+    font-weight: bold;
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .application-table-ap td {
+    font-size: 10px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+}
+@media (min-width: 481px) and  (max-width: 1024px) {
+  .applicants-container-ap{
+    padding: 0;
+    margin-top: 1rem;
+    width: 100%; /* White background */
+    overflow-x: hidden;
+  }
+  .header-ap {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: flex-start;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+}
+
+.header-ap h2, 
+.header-ap p {
+    margin-bottom: 15px; /* Removes default browser margin */
+    padding: 0;
+}
+  
+  .application-title-ap {
+    font-size: 30px;
+  }
+  .total-label-ap {
+    font-size: 25px;
+    margin-left: 600px;
+  }
+  
+  .total-count-ap {
+    font-size: 25px;
+    
+  }
+  .top-controls-applicants-ap {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search-bar-applicants-ap {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 40px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+  }
+  
+  .search-bar-applicants-ap input {
+    width: 765px;
+    margin-right: 1px;
+    padding: 0.55rem 0.4rem;
+    font-size: 15px;
+  }
+
+  .search-bar-applicants-ap input::placeholder {
+    font-size: 10px;
+  }
+  .schedule-button-ap{
+  font-size: 15px;
+  margin-left: 72px;
+  }
+  .application-table-ap {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .application-table-ap th {
+    color: #333333;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .application-table-ap td {
+    font-size: 15px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+}
+
+/* 768px and below */
+@media (min-width: 481px) and  (max-width: 768px) {
+  .applicants-container-ap{
+    padding: 0;
+    margin-top: 2rem;
+    width: 100%; /* White background */
+    overflow-x: hidden;
+  }
+  .header-ap {
+    margin-top: 55px; /* Adjust this if needed */
+    padding: 0;
+    display: flex; /* Corrected */
+    justify-content: flex-start;
+    align-items: center; /* Align elements vertically */
+    width: 100%;
+}
+
+.header-ap h2, 
+.header-ap p {
+    margin-bottom: 15px; /* Removes default browser margin */
+    padding: 0;
+}
+  
+  .application-title-ap {
+    font-size: 25px;
+  }
+  .total-label-ap {
+    font-size: 35px;
+    margin-left: 380px;
+  }
+  
+  .total-count-ap {
+    font-size: 25px;
+    
+  }
+  .top-controls-applicants-ap {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 1px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center;
+  }
+  .search-bar-applicants-ap {
+    margin-top: 1px;
+    margin-bottom: 10px;
+    gap: 40px;
+    padding: 0;
+    width: 100%;
+    display: flex; /* Corrected */
+    justify-content: space-between;
+    align-items: center; /* Align elements vertically */
+  }
+  
+  .search-bar-applicants-ap input {
+    width: 465px;
+    margin-right: 1px;
+    padding: 0.55rem 0.4rem;
+    font-size: 15px;
+  }
+
+  .search-bar-applicants-ap input::placeholder {
+    font-size: 10px;
+  }
+  .schedule-button-ap{
+  font-size: 15px;
+  margin-left: 72px;
+  }
+  .application-table-ap {
+    width: 100%;
+    border-collapse: collapse;
+    margin-top: 10px;
+  }
+  .application-table-ap th {
+    color: #333333;
+    font-weight: bold;
+    font-size: 15px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+  .application-table-ap td {
+    font-size: 15px;
+    padding: 15px;
+    white-space: nowrap;
+  }
+}

@@ -1,0 +1,314 @@
+.payment-records-container-pspay {
+  width: 100%;
+  height: 100vh;
+  padding-left: 2rem;
+  padding-right: 2rem;
+  padding-top: 1.5rem;
+  overflow-y: auto; /* Enables vertical scrolling */
+  overflow-x: hidden;
+}
+
+.payment-records-container-pspay::-webkit-scrollbar {
+  width: 10px;
+  background-color: #ffffff; /* White background */
+}
+
+.payment-records-container-pspay::-webkit-scrollbar-thumb {
+  background-color: #b0b0b0; /* Light grey color for the thumb */
+  border-radius: 5px;
+}
+
+.payment-records-container-pspay::-webkit-scrollbar-track {
+  background-color: #ffffff; /* White background for the track */
+}
+
+.payment-records-title-pspay {
+  font-size: 35px;
+  font-weight: bold;
+  color: #006400; /* Dark green */
+  margin-bottom: 1.5rem;
+}
+
+.top-controls-payment-records-pspay {
+  display: flex;
+  justify-content: space-between; /* Title and buttons alignment */
+  align-items: center;
+  margin-bottom: 1.5rem;
+}
+
+.buttons-group-payment-records-pspay {
+  display: flex;
+  gap: 1rem; /* Spacing between buttons */
+}
+
+.xls-button-payment-records-pspay,
+.pdf-button-payment-records-pspay {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.xls-button-payment-records-pspay:hover,
+.pdf-button-payment-records-pspay:hover {
+  background-color: #f8f8f8;
+}
+.payment-records-table-container-pspay{
+  width: 100%;
+  overflow-x: auto;
+  -webkit-overflow-scrolling: touch; 
+}
+
+.payment-records-table-container-pspay::-webkit-scrollbar {
+  height: 3px; /* height for horizontal scrollbar */
+}
+
+.payment-records-table-container-pspay::-webkit-scrollbar-track {
+  background: #f1f1f1; /* track color */
+  border-radius: 10px;
+}
+
+.payment-records-table-container-pspay::-webkit-scrollbar-thumb {
+  background: #f1f1f1; /* thumb color */
+  border-radius: 3px;
+}
+
+.payment-records-table-container-pspay::-webkit-scrollbar-thumb:hover {
+  background: #555; /* thumb color on hover */
+}
+.payment-records-table--pspay {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+
+}
+
+.payment-records-table-pspay th,
+.payment-records-table-pspay td {
+  padding: 12px;
+  text-align: left;
+  border-bottom: 1px solid #ddd;
+  white-space: nowrap;
+}
+
+.payment-records-table-pspay th {
+  color: #333333; /* Dark gray */
+  font-weight: bold;
+  font-size: 10px;
+}
+
+.payment-records-table-pspay td {
+  color: #555555; /* Medium gray */
+  font-size: 10px;
+}
+
+.payment-records-table-pspay tr:hover {
+  background-color: #f9f9f9; /* Light hover effect */
+}
+
+.balance-summary-pspay {
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  font-size: 14px;
+  margin-top: 1rem;
+}
+
+.balance-summary-pspay span {
+  font-weight: bold;
+  color: #333333;
+}
+
+.balance-input-pspay {
+  width: 100px;
+  margin-left: 0.5rem;
+  padding: 5px;
+  border: 1px solid #ccc;
+  border-radius: 4px;
+  text-align: right;
+  color: red;
+  font-weight: bold;
+}
+/* Modal Styles */
+.modal-confirmation-pspay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content-pspay {
+  background-color: #fff;
+  padding: 3rem;
+  border-radius: 8px;
+  width: 600px;
+  max-width: 90%;
+  box-shadow: 0 2px 10px rgba(0, 0, 0, 0.1);
+}
+.modal-content-pspay h3{
+  font-size: 30px;
+  font-weight: bold;
+  color: #006400;
+  text-align: center;
+  margin-bottom: 20px;
+}
+.modal-content-pspay p{
+  font-size: 14px;
+  color: #333;
+  margin-bottom: 40px;
+  text-align: center;
+  font-weight: 500;
+}
+.button-group-pspay {
+  display: flex;
+  justify-content: center; /* Center the buttons horizontally */
+  align-items: center;     /* Center the buttons vertically if needed */
+  gap: 5rem;               /* Optional: Adds space between buttons */
+  margin-top: 1rem;   
+  margin-bottom: 10px;
+}
+
+.confirm-button-pspay {
+  background-color: #1d563f;
+  color: white;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 110px;
+}
+
+.confirm-button-pspay:hover {
+  background-color: #004d33;
+}
+
+.cancel-button-pspay {
+  background-color: #ffffff;
+  color: #006400;
+  border: 1px solid #006400;
+  padding: 0.5rem 1.5rem;
+  border-radius: 4px;
+  cursor: pointer;
+  font-size: 14px;
+  width: 110px;
+}
+
+.cancel-button-pspay :hover {
+  background-color: #e6f5e9;
+}
+@media (max-width: 480px) {
+.payment-records-container-pspay {
+  padding: 0;
+  margin-top: 3rem;
+  overflow-x: hidden;
+  margin-bottom: 0px;
+}
+.payment-records-title-pspay {
+  margin-top: 25px;
+  font-size: 20px;
+  margin-bottom: 1px;
+}
+.top-controls-payment-records-pspay {
+  margin-top: 1rem;
+  margin-bottom: -10px;
+  gap: 10px;
+}
+.buttons-group-payment-records-pspay {
+  gap: 10px;
+  margin-top: 20px;
+}
+.xls-button-payment-records-pspay,
+.pdf-button-payment-records-pspay {
+  font-size: 10px;
+  padding: 0.5rem 1rem;
+}
+.payment-records-table-pspay {
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 1.5rem;
+  margin-top:1rem;
+}
+}
+@media (min-width:481px) and (max-width: 768px) {
+  .payment-records-container-pspay {
+    padding: 0;
+    margin-top: 5rem;
+    overflow-x: hidden;
+    margin-bottom: 0px;
+  }
+  .payment-records-title-pspay {
+    margin-top: 25px;
+    font-size: 30px;
+    margin-bottom: 1px;
+  }
+  .buttons-group-payment-records-pspay {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .xls-button-payment-records-pspay,
+.pdf-button-payment-records-pspay {
+  font-size: 15px;
+}
+  .payment-records-table-pspay th {
+  font-size: 14px;
+  padding: 15px;
+  white-space: nowrap;
+}
+.payment-records-table-pspay td {
+  font-size: 15px;
+  padding: 15px;
+  white-space: nowrap;
+}
+.balance-summary-pspay span {
+  font-size: 15px;
+}
+.balance-input-pspay {
+  font-size: 15px;
+}
+}
+@media (min-width:769px) and (max-width: 1024px) {
+  .payment-records-container-pspay {
+    padding: 0;
+    margin-top: 3rem;
+    overflow-x: hidden;
+    margin-bottom: 0px;
+  }
+  .payment-records-title-pspay {
+    margin-top: 25px;
+    font-size: 30px;
+    margin-bottom: 1px;
+  }
+  .buttons-group-payment-records-pspay {
+    gap: 10px;
+    margin-top: 20px;
+  }
+  .xls-button-payment-records-pspay,
+.pdf-button-payment-records-pspay {
+  font-size: 15px;
+}
+  .payment-records-table-pspay th {
+  font-size: 14px;
+  padding: 15px;
+  white-space: nowrap;
+}
+.payment-records-table-pspay td {
+  font-size: 15px;
+  padding: 15px;
+  white-space: nowrap;
+}
+.balance-summary-pspay span {
+  font-size: 15px;
+}
+.balance-input-pspay {
+  font-size: 15px;
+}
+}
