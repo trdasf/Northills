@@ -32,7 +32,7 @@ const Payments = () => {
 
   const fetchAllPayments = () => {
     const baseUrl = window.location.hostname === "localhost"
-        ? "http://localhost:8000"
+        ? "http://mediumaquamarine-dunlin-251088.hostingersite.com"
         : "http://192.168.1.10:8000"; // Adjust for mobile access
 
     fetch(`${baseUrl}/get_all_payments.php`)
@@ -50,7 +50,7 @@ const Payments = () => {
 
 const fetchReceiptNumber = () => {
     const baseUrl = window.location.hostname === "localhost"
-        ? "http://localhost:8000"
+        ? "http://mediumaquamarine-dunlin-251088.hostingersite.com"
         : "http://192.168.1.10:8000"; // Adjust for mobile access
 
     fetch(`${baseUrl}/get_receipt.php`)
@@ -230,7 +230,7 @@ useEffect(() => {
 
   const handleNameBlur = () => {
     if (searchName.trim() !== "") {
-      fetch(`http://localhost:8000/payment.php?name=${searchName}`)
+      fetch(`http://mediumaquamarine-dunlin-251088.hostingersite.com/payment.php?name=${searchName}`)
         .then((response) => response.json())
         .then((data) => {
           if (data.success && data.applicants.length > 0) {
@@ -315,7 +315,7 @@ useEffect(() => {
   const confirmSave = () => {
     console.log("Saving payment with data:", currentPayment); // Debug the payload
   
-    fetch("http://localhost:8000/save_payment.php", {
+    fetch("http://mediumaquamarine-dunlin-251088.hostingersite.com/save_payment.php", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify(currentPayment), // Ensure status is included in the payload

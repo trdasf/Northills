@@ -39,7 +39,7 @@ const Faculty = () => {
   // Fetch faculty data and strands data from the backend
   useEffect(() => {
     const baseUrl = window.location.hostname === "localhost"
-        ? "http://localhost:8000"
+        ? "http://mediumaquamarine-dunlin-251088.hostingersite.com"
         : "http://192.168.1.10:8000"; // Adjust IP for mobile access
 
     // Fetch faculty data
@@ -85,7 +85,7 @@ const Faculty = () => {
 
   const handleDeleteClick = (id) => {
     axios
-      .delete("http://localhost:8000/faculty.php", { data: { faculty_id: id } })
+      .delete("http://mediumaquamarine-dunlin-251088.hostingersite.com/faculty.php", { data: { faculty_id: id } })
       .then(() => {
         setFaculty(facultyList.filter((faculty) => faculty.faculty_id !== id));
       })
@@ -150,7 +150,7 @@ const Faculty = () => {
     if (isEditMode) {
       requestData.faculty_id = currentFaculty.faculty_id;
       axios
-        .put("http://localhost:8000/faculty.php", requestData)
+        .put("http://mediumaquamarine-dunlin-251088.hostingersite.com/faculty.php", requestData)
         .then(() => {
           setFaculty(
             facultyList.map((faculty) =>
@@ -163,7 +163,7 @@ const Faculty = () => {
         });
     } else {
       axios
-        .post("http://localhost:8000/faculty.php", requestData)
+        .post("http://mediumaquamarine-dunlin-251088.hostingersite.com/faculty.php", requestData)
         .then((response) => {
           if (response.data.success) {
             alert("Faculty added successfully along with related data!");

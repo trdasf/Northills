@@ -61,7 +61,7 @@ const Announcement = () => {
   const fetchAnnouncements = async () => {
     try {
       setLoading(true);
-      const response = await fetch('http://localhost:8000/announcement.php');
+      const response = await fetch('http://mediumaquamarine-dunlin-251088.hostingersite.com/announcement.php');
       
       if (!response.ok) {
         throw new Error(`HTTP error! Status: ${response.status}`);
@@ -207,7 +207,7 @@ const Announcement = () => {
         }
       }
       
-      let url = 'http://localhost:8000/announcement.php';
+      let url = 'http://mediumaquamarine-dunlin-251088.hostingersite.com/announcement.php';
       let method = 'POST';
       
       if (modalMode === 'edit') {
@@ -245,7 +245,7 @@ const Announcement = () => {
       form.append('_method', 'DELETE');
       form.append('announcement_id', selectedAnnouncement.announcement_id);
       
-      const response = await fetch('http://localhost:8000/announcement.php', {
+      const response = await fetch('http://mediumaquamarine-dunlin-251088.hostingersite.com/announcement.php', {
         method: 'POST',
         body: form,
       });
@@ -269,11 +269,11 @@ const Announcement = () => {
   };
 
   const viewAttachment = (announcement) => {
-    window.open(`http://localhost:8000/announcement.php?attachment_id=${announcement.announcement_id}`, '_blank');
+    window.open(`http://mediumaquamarine-dunlin-251088.hostingersite.com/announcement.php?attachment_id=${announcement.announcement_id}`, '_blank');
   };
 
   const downloadAttachment = (announcement) => {
-    window.open(`http://localhost:8000/announcement.php?attachment_id=${announcement.announcement_id}&download=true`, '_blank');
+    window.open(`http://mediumaquamarine-dunlin-251088.hostingersite.com/announcement.php?attachment_id=${announcement.announcement_id}&download=true`, '_blank');
   };
 
   return (
@@ -455,7 +455,7 @@ const Announcement = () => {
                   {modalMode === 'view' && formData.attachment_name ? (
                     <div className="view-attachment">
                       <a 
-                        href={`http://localhost:8000/announcement.php?attachment_id=${formData.announcement_id}`}
+                        href={`http://mediumaquamarine-dunlin-251088.hostingersite.com/announcement.php?attachment_id=${formData.announcement_id}`}
                         target="_blank"
                         rel="noopener noreferrer"
                       >

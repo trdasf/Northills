@@ -37,7 +37,7 @@ const Subjects = () => {
 
   const fetchData = async () => {
     const baseUrl = window.location.hostname === "localhost"
-        ? "http://localhost:8000"
+        ? "http://mediumaquamarine-dunlin-251088.hostingersite.com"
         : "http://192.168.1.10:8000"; // Adjust for mobile access
 
     try {
@@ -212,7 +212,7 @@ const Subjects = () => {
     setCurrentSubject({ ...currentSubject, strand: selectedStrand, section: "" }); // Reset section
   
     try {
-      const response = await fetch(`http://localhost:8000/subjects.php?type=sections&strand=${selectedStrand}`);
+      const response = await fetch(`http://mediumaquamarine-dunlin-251088.hostingersite.com/subjects.php?type=sections&strand=${selectedStrand}`);
       const data = await response.json();
       setSections(data);
     } catch (error) {
@@ -236,7 +236,7 @@ const Subjects = () => {
     };
   
     try {
-      const response = await fetch("http://localhost:8000/subjects.php", {
+      const response = await fetch("http://mediumaquamarine-dunlin-251088.hostingersite.com/subjects.php", {
         method: isEditMode ? "PUT" : "POST",
         headers: { "Content-Type": "application/json" },
         body: JSON.stringify(payload),
@@ -261,7 +261,7 @@ const Subjects = () => {
     
     if (confirmDelete) {
       try {
-        const response = await fetch("http://localhost:8000/subjects.php", {
+        const response = await fetch("http://mediumaquamarine-dunlin-251088.hostingersite.com/subjects.php", {
           method: "DELETE",
           headers: { "Content-Type": "application/json" },
           body: JSON.stringify({ subject_id }),
@@ -272,7 +272,7 @@ const Subjects = () => {
   
         if (data.success) {
           // After deletion, fetch the updated data directly
-          const subjectsResponse = await fetch("http://localhost:8000/subjects.php");
+          const subjectsResponse = await fetch("http://mediumaquamarine-dunlin-251088.hostingersite.com/subjects.php");
           const subjectsData = await subjectsResponse.json();
           setSubjects(subjectsData);
           setFilteredSubjects(subjectsData); // Update filtered subjects

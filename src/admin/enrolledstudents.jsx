@@ -18,7 +18,7 @@ const EnrolledStudents = () => {
   useEffect(() => {
     const apiUrl =
       window.location.hostname === "localhost"
-        ? "http://localhost:8000/fetch_enrolled.php"
+        ? "http://mediumaquamarine-dunlin-251088.hostingersite.com/fetch_enrolled.php"
         : "http://192.168.1.10:8000/fetch_enrolled.php";
   
     fetch(apiUrl)

@@ -31,7 +31,7 @@ const Strands = () => {
 
   useEffect(() => {
     const baseUrl = window.location.hostname === "localhost"
-        ? "http://localhost:8000"
+        ? "http://mediumaquamarine-dunlin-251088.hostingersite.com"
         : "http://192.168.1.10:8000"; // Adjust for mobile access
 
     const fetchStrands = async () => {
@@ -107,7 +107,7 @@ const Strands = () => {
   const handleDeleteClick = async (id) => {
     const confirmDelete = window.confirm("Are you sure you want to delete this strand?");
     if (confirmDelete) {
-      const response = await fetch("http://localhost:8000/strands.php", {
+      const response = await fetch("http://mediumaquamarine-dunlin-251088.hostingersite.com/strands.php", {
         method: "DELETE",
         headers: {
           "Content-Type": "application/json",
@@ -136,7 +136,7 @@ const Strands = () => {
 
   const handleConfirmSave = async () => {
     if (currentStrand.strand_id) {
-      const response = await fetch("http://localhost:8000/strands.php", {
+      const response = await fetch("http://mediumaquamarine-dunlin-251088.hostingersite.com/strands.php", {
         method: "PUT",
         headers: {
           "Content-Type": "application/json",
@@ -160,7 +160,7 @@ const Strands = () => {
         alert("Error updating strand");
       }
     } else {
-      const response = await fetch("http://localhost:8000/strands.php", {
+      const response = await fetch("http://mediumaquamarine-dunlin-251088.hostingersite.com/strands.php", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",

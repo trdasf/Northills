@@ -11,7 +11,7 @@ const StudentReportLists = () => {
 
   const fetchStudents = async () => {
     const baseUrl = window.location.hostname === "localhost"
-        ? "http://localhost:8000"
+        ? "http://mediumaquamarine-dunlin-251088.hostingersite.com"
         : "http://192.168.1.10:8000"; // Adjust for mobile access
 
     try {

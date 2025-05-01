@@ -60,7 +60,7 @@ const AdminReport = () => {
       setOptionsLoading(true);
       try {
         console.log("Fetching options from server...");
-        const response = await axios.get("http://localhost:8000/search_students.php");
+        const response = await axios.get("http://mediumaquamarine-dunlin-251088.hostingersite.com/search_students.php");
         console.log("Response:", response.data);
         
         if (response.data.success) {

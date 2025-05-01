@@ -29,7 +29,7 @@ const Schedule = () => {
   const fetchSchedules = async () => {
     try {
         const baseUrl = window.location.hostname === "localhost"
-            ? "http://localhost:8000"
+            ? "http://mediumaquamarine-dunlin-251088.hostingersite.com"
             : "http://192.168.1.10:8000"; // Adjust for mobile access
 
         const response = await fetch(`${baseUrl}/schedule.php`);
@@ -134,7 +134,7 @@ const Schedule = () => {
   const handleConfirmAction = async () => {
     if (actionType === 'add' || actionType === 'edit') {
       const method = isEditMode ? 'PUT' : 'POST';
-      const response = await fetch('http://localhost:8000/schedule.php', {
+      const response = await fetch('http://mediumaquamarine-dunlin-251088.hostingersite.com/schedule.php', {
         method: method,
         body: JSON.stringify(currentSchedule),
       });
@@ -146,7 +146,7 @@ const Schedule = () => {
         alert('Failed to save schedule');
       }
     } else if (actionType === 'delete') {
-      const response = await fetch('http://localhost:8000/schedule.php', {
+      const response = await fetch('http://mediumaquamarine-dunlin-251088.hostingersite.com/schedule.php', {
         method: 'DELETE',
         body: JSON.stringify({ schedule_id: currentSchedule.schedule_id }),
       });

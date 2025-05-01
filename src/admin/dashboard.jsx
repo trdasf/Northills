@@ -25,7 +25,7 @@ const Dashboard = () => {
 
     const apiUrl =
       window.location.hostname === "localhost"
-        ? "http://localhost:8000/admin_dashboard.php"
+        ? "http://mediumaquamarine-dunlin-251088.hostingersite.com/admin_dashboard.php"
         : "http://192.168.1.10:8000/admin_dashboard.php"; // Para sa mobile access
 
     fetch(apiUrl)

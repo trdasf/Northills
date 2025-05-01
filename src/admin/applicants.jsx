@@ -12,8 +12,8 @@ const Applicants = () => {
   useEffect(() => {
     const apiUrl =
       window.location.hostname === "localhost"
-        ? "http://localhost:8000/fetch_applicants.php"
-        : "http://192.168.1.10:8000/fetch_applicants.php"; // Gamitin ang IP para sa mobile access
+        ? "http://mediumaquamarine-dunlin-251088.hostingersite.com/fetch_applicants.php"
+        : "http://mediumaquamarine-dunlin-251088.hostingersite.com/fetch_applicants.php"; // Gamitin ang IP para sa mobile access
   
     fetch(apiUrl)
       .then((response) => response.json())

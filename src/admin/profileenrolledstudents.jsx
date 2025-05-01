@@ -21,7 +21,7 @@ const ProfileEnrolledStudents = () => {
   // Dynamically determine API URL based on device
   const apiUrl =
     window.location.hostname === "localhost"
-      ? `http://localhost:8000/applicant_details.php?student_id=${student_id}`
+      ? `http://mediumaquamarine-dunlin-251088.hostingersite.com/applicant_details.php?student_id=${student_id}`
       : `http://192.168.1.10:8000/applicant_details.php?student_id=${student_id}`; // Change 192.168.1.11 to your actual PC's local network IP
 
   fetch(apiUrl)
